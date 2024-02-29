@@ -1,0 +1,19 @@
+{
+    "rankings": [
+        {
+            "id": 1,
+            "name": "Thịng hành",
+            "path": "/mosttrending"
+        },
+        {
+            "id": 2,
+            "name": "Xem nhiều",
+            "path": "/mostview"
+        },
+        {
+            "id": 3,
+            "name": "Yêu thích",
+            "path": "/mostfavorite"
+        }
+    ]
+}

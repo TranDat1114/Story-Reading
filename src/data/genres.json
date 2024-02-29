@@ -1,0 +1,24 @@
+{
+    "genres": [
+        {
+            "id": 1,
+            "name": "Action",
+            "path": "action"
+        },
+        {
+            "id": 2,
+            "name": "Adventure",
+            "path": "adventure"
+        },
+        {
+            "id": 3,
+            "name": "Animation",
+            "path": "animation"
+        },
+        {
+            "id": 4,
+            "name": "Biography",
+            "path": "biography"
+        }
+    ]
+}

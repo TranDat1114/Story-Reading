@@ -1,0 +1,28 @@
+{
+    "header": {
+        "story": "Truyện chữ",
+        "home": "Trang chủ",
+        "novels": "Truyện",
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "logout": "Đăng xuất",
+        "search": "Tìm kiếm",
+        "language": "Ngôn ngữ",
+        "rankings": "Xếp hạng",
+        "genres": "Thể loại"
+    },
+    "footer": {
+        "about": "Giới thiệu",
+        "terms": "Điều khoản sử dụng",
+        "privacy": "Chính sách bảo mật",
+        "contact": "Liên hệ"
+    },
+    "main": {
+        "home": {
+            "title": "Trang chủ"
+        },
+        "novels": {
+            "title": "Truyện"
+        }
+    }
+}

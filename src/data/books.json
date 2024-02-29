@@ -1,0 +1,52 @@
+{
+    "books": [
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
+            "name": "Your Name",
+            "chapters": 5,
+            "desc": "Your Name (Japanese: 君の名は。, Hepburn: Kimi no Na wa), sometimes stylized as Your Name., is a 2016 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films and distributed by Toho. It depicts the story of high school students Taki Tachibana and Mitsuha Miyamizu, who suddenly begin to swap bodies despite having never met, unleashing chaos on each other's lives. The film was inspired by the frequency of natural disasters in Japan."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Suzume_no_Tojimari_poster.jpg",
+            "name": "Suzume",
+            "chapters": 5,
+            "desc": "Suzume (Japanese: すずめの戸締まり, Hepburn: Suzume no Tojimari, lit. 'Suzume's Locking Up') is a 2022 Japanese animated coming-of-age fantasy adventure film written and directed by Makoto Shinkai, produced by CoMix Wave Films, and distributed by Toho. The film follows 17-year-old high school girl Suzume Iwato and young stranger Souta Munakata, who team up to prevent a series of disasters across Japan by sealing doors from the colossal, supernatural worm that causes earthquakes after being released."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/3/33/Wiedzmin_1990.png",
+            "name": "The Witcher",
+            "chapters": 5,
+            "desc": "The Witcher (Polish: Wiedźmin, pronounced [ˈvjɛd͡ʑmin]) is a series of six fantasy novels and 15 short stories written by Polish author Andrzej Sapkowski. The series revolves around the eponymous witcher, Geralt of Rivia."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
+            "name": "5 Centimeters per Second",
+            "chapters": 5,
+            "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
+            "name": "5 Centimeters per Second",
+            "chapters": 5,
+            "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
+            "name": "5 Centimeters per Second",
+            "chapters": 5,
+            "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
+            "name": "5 Centimeters per Second",
+            "chapters": 5,
+            "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him."
+        },
+        {
+            "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
+            "name": "5 Centimeters per Second",
+            "chapters": 5,
+            "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him."
+        }
+    ]
+}
