@@ -113,7 +113,7 @@ export default function Header() {
                                                     {
                                                         route.dropdownItems?.map((item, index) => (
                                                             <li key={index} >
-                                                                <Link tabIndex={index} to={item.path} target="_blank" className="text-nowrap">
+                                                                <Link tabIndex={index} to={`${route.path}${item.path}`} className="text-nowrap">
                                                                     {item.name}</Link>
                                                             </li>
                                                         ))
