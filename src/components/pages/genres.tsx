@@ -6,12 +6,13 @@ import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
-
+import { useParams } from "react-router-dom";
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 
-
 const GenrePage = () => {
+    const { genresName } = useParams();
+
     const databooks: Book[] = BookData.books;
 
     const startedRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ const GenrePage = () => {
     };
     return (
         <div>
+            {genresName}
             <div className="flex items-center flex-col lg:items-start space-y-4">
                 <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
                     <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">chương mới - xem ngay!</p>
@@ -49,7 +51,6 @@ const GenrePage = () => {
                 <EmblaCarousel slides={databooks} options={OPTIONS} />
             </div>
             <div className="divider"></div>
-
             <div className="flex items-center flex-col lg:items-start space-y-4">
                 <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
                     <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Những truyện tranh phổ biến</p>
@@ -73,31 +74,29 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-            <div className="overflow-x-auto space-y-4">
-                <p className="font-semibold capitalize flex justify-center md:text-xl">bảng xếp hạng truyện</p>
-                {BookData.books.map((book, index) => (
-                    <table className="table" key={index}>
-                        <tbody>
-                            <tr className="hover">
-                                <th>{index + 1}</th>
-                                <td>
-                                    <img src={book.img} className="max-w-24 rounded-md object-center bg-center" />
-                                </td>
-                                <td className="w-full">
-                                    <p className="font-semibold flex flex-row cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out">{book.name}</p>
-                                    <div className="flex justify-start items-center flex-wrap">
-                                        {book.categories.map((category, index) => (
-                                            <div key={index} className="flex-row flex">
-                                                <span className='text-orange-500 cursor-pointer'>{category.name}</span>
-                                                {index < book.categories.length - 1 && <span className='text-gray-500 mx-1'>,</span>}
-                                            </div>
-                                        ))}
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                ))}
+            <div className="flex items-center flex-col lg:items-start space-y-4">
+                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
+                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện lãng mạn</p>
+                </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} />
+            </div>
+            <div className="flex items-center flex-col lg:items-start space-y-4">
+                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
+                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện hành động</p>
+                </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} />
+            </div>
+            <div className="flex items-center flex-col lg:items-start space-y-4">
+                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
+                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện phiêu lưu</p>
+                </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} />
+            </div>
+            <div className="flex items-center flex-col lg:items-start space-y-4">
+                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
+                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện bí ẩn</p>
+                </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} />
             </div>
         </div>
     );
