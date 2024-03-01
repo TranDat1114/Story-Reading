@@ -17,7 +17,7 @@ i18n
     .use(initReactI18next)
     .init({
         resources,
-        fallbackLng: localStorage.getItem('language') || 'en', // Lựa chọn ngôn ngữ mặc định
+        fallbackLng: localStorage.getItem('language') || 'vi', // Lựa chọn ngôn ngữ mặc định
         debug: false,
         interpolation: {
             escapeValue: false // not needed for react as it escapes by default
