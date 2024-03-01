@@ -27,7 +27,7 @@ const HomePage = () => {
         <div className="w-full">
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperset.com%2Fw%2Ffull%2F1%2F3%2F5%2F233024.jpg&f=1&nofb=1&ipt=d89273e1af2d743b5b5d218b7ee35ce1b957913c29bcb8502c71c87198d69aeb&ipo=images" className="shadow-2xl max-w-xl rounded-lg bg-transparent w-full" />
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images" className="shadow-2xl max-w-xl rounded-lg bg-transparent w-full object-cover max-h-96" />
 
                     <div>
                         <h1 className="text-5xl font-bold">Truyện Tranh Mới!</h1>
