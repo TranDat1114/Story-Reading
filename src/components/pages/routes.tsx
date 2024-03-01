@@ -5,6 +5,7 @@ import NovelsPage from "@/components/pages/novels"
 import genresData from "@/data/genres.json"
 import rankingsData from "@/data/rankings.json"
 import GenrePage from "@components/pages/genres"
+import ReadingPage from "./reading"
 
 const routes: Route[] = [
     {
@@ -23,6 +24,12 @@ const routes: Route[] = [
         path: "/novels/:novelName/:chapterNumber",
         name: "novels",
         element: <NovelsPage />,
+        icon: <Book size={16} />,
+    },
+    {
+        path: "/reading/:bookName",
+        name: "reading",
+        element: <ReadingPage />,
         icon: <Book size={16} />,
     }
 ]

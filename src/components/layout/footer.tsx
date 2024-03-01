@@ -13,7 +13,7 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-4">
-                        <Link to="https://github.com/TranDat1114/Story-Reading" className="c">
+                        <Link to="https://github.com/TranDat1114/Story-Reading" className="c" target="_blank">
                             <Github size={24} />
                         </Link>
                     </div>

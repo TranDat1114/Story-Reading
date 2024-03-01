@@ -8,46 +8,56 @@ import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
 import { motion } from "framer-motion";
 
+import React, { useRef } from 'react';
+
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 const HomePage = () => {
-
     const databooks: Book[] = BookData.books;
+
+    const startedRef = useRef<HTMLDivElement>(null);
+    const scrollToElement = (ref: React.RefObject<HTMLDivElement>) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+
     return (
         <div className="w-full">
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="h-96 carousel carousel-vertical rounded-box">
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Book Cover" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Book Cover" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Book Cover" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Book Cover" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Book Cover" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Book Cover" />
                         </div>
                         <div className="carousel-item h-full">
-                            <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" />
+                            <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Book Cover" />
                         </div>
                     </div>
                     <div>
                         <h1 className="text-5xl font-bold">Truyện Tranh Mới!</h1>
                         <p className="py-6">Trang web đọc truyện này cung cấp một trải nghiệm độc đáo và thú vị cho độc giả, với bộ sưu tập đa dạng của các thể loại truyện, từ hài hước đến kinh điển.</p>
-                        <button className="btn btn-primary">Bắt đầu nào</button>
+                        <button className="btn btn-primary" onClick={() => scrollToElement(startedRef)}>Bắt đầu nào</button>
                     </div>
                 </div>
             </div>
-            <div className="w-full mt-12 flex justify-center">
+            <div className="w-full mt-12 flex justify-center" id="started" ref={startedRef}>
                 <p className="text-2xl font-bold cursor-pointer">Những truyện tranh phổ biến</p>
             </div>
             <div className="w-full pt-4">
