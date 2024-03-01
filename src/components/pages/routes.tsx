@@ -5,7 +5,8 @@ import NovelsPage from "@/components/pages/novels"
 import genresData from "@/data/genres.json"
 import rankingsData from "@/data/rankings.json"
 import GenrePage from "@components/pages/genres"
-import ReadingPage from "./reading"
+import ReadingPage from "@components/pages/reading"
+import { RankingPage } from "@components/pages/rankings"
 
 const routes: Route[] = [
     {
@@ -29,7 +30,7 @@ const routes: Route[] = [
     {
         path: "/rankings/:rankingName",
         name: "rankings",
-        element: <NovelsPage />,
+        element: <RankingPage />,
         icon: <Sparkle size={16} />,
     },
     {
@@ -41,7 +42,7 @@ const routes: Route[] = [
     {
         path: "/genres/:genreName",
         name: "genres",
-        element: <NovelsPage />,
+        element: <GenrePage />,
         icon: <Dna size={16} />,
     },
     {

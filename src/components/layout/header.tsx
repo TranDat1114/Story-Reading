@@ -108,7 +108,11 @@ export default function Header() {
                                     {
                                         route.isDropdown ?
                                             <details>
-                                                <summary className="link link-hover"><Contact size={16} /> {t(route.name)}</summary>
+                                                <summary className="link link-hover"><Contact size={16} />
+                                                    <Link to={`${route.path}`} >
+                                                        {t(route.name)}
+                                                    </Link>
+                                                </summary>
                                                 <ul className="p-2 flex flex-col gap-4">
                                                     {
                                                         route.dropdownItems?.map((item, index) => (
@@ -118,7 +122,6 @@ export default function Header() {
                                                             </li>
                                                         ))
                                                     }
-
                                                 </ul>
                                             </details> :
                                             <Link to={route.path} className={`link link-hover ${('/' + location) === route.path ? "active" : ""}`}>
