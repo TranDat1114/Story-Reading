@@ -15,7 +15,16 @@
         "about": "Giới thiệu",
         "terms": "Điều khoản sử dụng",
         "privacy": "Chính sách bảo mật",
-        "contact": "Liên hệ"
+        "contact": "Liên hệ",
+        "faqs": "FAQs",
+        "suggestions": "Góp ý",
+        "support": "Hỗ trợ",
+        "copyright": "Bản quyền © 2024 - Tất cả các quyền được bảo lưu.",
+        "donace": "Donace",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "Email"
+        
     },
     "main": {
         "home": {

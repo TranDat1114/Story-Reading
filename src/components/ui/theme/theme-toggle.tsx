@@ -49,7 +49,7 @@ export default function ThemeToggle(
 
                 <label className="swap swap-rotate btn btn-square btn-ghost btn-md">
                     {/* this hidden checkbox controls the state */}
-                    <input type="checkbox" checked={isDark} onChange={() => setIsDark(!isDark)} className="theme-controller" value="dark" />
+                    <input type="checkbox" checked={isDark} onChange={() => setIsDark(!isDark)} className="theme-controller" value="light" />
 
                     {/* sun icon */}
                     <Sun size={24} className="fill-current swap-on text-warning" />

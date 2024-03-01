@@ -25,18 +25,21 @@ const HomePage = () => {
 
     return (
         <div className="w-full">
-            <div className="hero bg-base-200 my-4 p-4">
-                <div className="hero-content flex-col lg:flex-row gap-x-12 ">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images" className="shadow-2xl max-w-xl rounded-lg bg-transparent w-full object-cover max-h-96" />
+            <div className="hero rounded-box relative bg-[url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images')] my-4">
+                <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
+                <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images" className="shadow-2xl w-full max-w-xl rounded-lg bg-transparent object-cover max-h-96" />
 
-                    <div>
-                        <h1 className="text-5xl font-bold">Truyện Tranh Mới!</h1>
-                        <p className="py-6">Trang web đọc truyện này cung cấp một trải nghiệm độc đáo và thú vị cho độc giả, với bộ sưu tập đa dạng của các thể loại truyện, từ hài hước đến kinh điển.</p>
+                    <div className="lg:w-1/2">
+                        <div className="prose">
+                            <h1 className="text-primary text-center lg:text-start">Doraemon truyện chữ</h1>
+                            <h4 className="py-4">Trang web đọc truyện này cung cấp một trải nghiệm độc đáo và thú vị cho độc giả, với bộ sưu tập đa dạng của các thể loại truyện, từ hài hước đến kinh điển.</h4>
+                        </div>
                         <button className="btn btn-primary" onClick={() => scrollToElement(startedRef)}>Bắt đầu nào</button>
                     </div>
                 </div>
             </div>
-          
+
             <div className="flex items-center flex-col lg:items-start space-y-4" ref={startedRef}>
                 <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
                     <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
