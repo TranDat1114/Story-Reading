@@ -6,12 +6,13 @@ import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
-
+import { useParams } from "react-router-dom";
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 
-
 const GenrePage = () => {
+    const { genresName } = useParams();
+
     const databooks: Book[] = BookData.books;
 
     const startedRef = useRef<HTMLDivElement>(null);
@@ -22,6 +23,7 @@ const GenrePage = () => {
     };
     return (
         <div>
+            {genresName}
             <div className="flex items-center flex-col lg:items-start space-y-4">
                 <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
                     <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">chương mới - xem ngay!</p>
