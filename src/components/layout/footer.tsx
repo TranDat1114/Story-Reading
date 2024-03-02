@@ -1,25 +1,42 @@
-import { Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+    const { t } = useTranslation("translation", {
+        keyPrefix: "footer"
+    });
     return (
-        <div>
-            <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
-                <nav className="grid grid-flow-col gap-4">
-                    <a className="link link-hover">Về chúng tôi</a>
-                    <a className="link link-hover">Liên lạc</a>
-                    <a className="link link-hover">Chính sách</a>
-                    <a className="link link-hover">Bảo mật</a>
+        <div className=" bg-base-200 w-full">
+            <footer className="footer mx-auto container p-10 text-base-content justify-between">
+                <nav>
+                    <h6 className="footer-title">Services</h6>
+                    <a className="link link-hover">Branding</a>
+                    <a className="link link-hover">Design</a>
+                    <a className="link link-hover">Marketing</a>
+                    <a className="link link-hover">Advertisement</a>
                 </nav>
                 <nav>
-                    <div className="grid grid-flow-col gap-4">
-                        <Link to="https://github.com/TranDat1114/Story-Reading" className="c" target="_blank">
-                            <Github size={24} />
-                        </Link>
-                    </div>
+                    <h6 className="footer-title">Company</h6>
+                    <a className="link link-hover">About us</a>
+                    <a className="link link-hover">Contact</a>
+                    <a className="link link-hover">Jobs</a>
+                    <a className="link link-hover">Press kit</a>
                 </nav>
+                <nav>
+                    <h6 className="footer-title">{t("support")}</h6>
+                    <a className="link link-hover">{t("faqs")}</a>
+                    <a className="link link-hover">{t("privacy")}</a>
+                    <a className="link link-hover">{t("terms")}</a>
+                </nav>
+                <nav>
+                    <h6 className="footer-title">{t("contact")}</h6>
+                    <a className="link link-hover">{t("address")}: xxxxxxxxxxxxxxx</a>
+                    <a className="link link-hover">{t("phone")}: xxxxxxxxxxxx</a>
+                    <a className="link link-hover">{t("email")}: xxxxxxxxx</a>
+                </nav>
+            </footer>
+            <footer className="footer footer-center p-4 bg-base-300 text-base-content">
                 <aside>
-                    <p>Copyright © 2024 - Mọi bản quyền đều thuộc về Phú Đạt</p>
+                    <p>{t("copyright")}</p>
                 </aside>
             </footer>
         </div>

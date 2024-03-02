@@ -15,7 +15,15 @@
         "about": "Giới thiệu",
         "terms": "Điều khoản sử dụng",
         "privacy": "Chính sách bảo mật",
-        "contact": "Liên hệ"
+        "contact": "Liên hệ",
+        "faqs": "FAQs",
+        "suggestions": "Góp ý",
+        "support": "Hỗ trợ",
+        "copyright": "Bản quyền © 2024 - Tất cả các quyền được bảo lưu.",
+        "donace": "Donace",
+        "address": "Địa chỉ",
+        "phone": "Điện thoại",
+        "email": "Email"
     },
     "main": {
         "home": {
@@ -23,6 +31,37 @@
         },
         "novels": {
             "title": "Truyện"
+        },
+        "genres": {
+            "title": "Thể loại",
+            "all": "Tất cả",
+            "romance": "Lãng mạn",
+            "fantasy": "Huyễn huyễn",
+            "action": "Hành động",
+            "adventure": "Phiêu lưu",
+            "mystery": "Bí ẩn",
+            "horror": "Kinh dị",
+            "comedy": "Hài hước",
+            "drama": "Kịch",
+            "historical": "Lịch sử",
+            "thriller": "Hồi hộp",
+            "supernatural": "Siêu nhiên",
+            "school": "Học đường",
+            "slice_of_life": "Đời thường",
+            "psychological": "Tâm lý",
+            "sci_fi": "Khoa học viễn tưởng",
+            "martial_arts": "Võ thuật",
+            "sports": "Thể thao",
+            "yaoi": "Yaoi",
+            "yuri": "Yuri",
+            "mecha": "Mecha",
+            "shoujo": "Shoujo",
+            "shounen": "Shounen",
+            "josei": "Josei",
+            "seinen": "Seinen",
+            "harem": "Harem",
+            "ecchi": "Ecchi",
+            "mature": "Mature"
         }
     }
 }

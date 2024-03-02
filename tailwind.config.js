@@ -1,3 +1,6 @@
+import { light,dark } from "daisyui/src/theming/themes";
+import typography from "@tailwindcss/typography";
+import daisyui from "daisyui";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,10 +11,22 @@ export default {
     extend: {},
   },
   plugins: [
-    // eslint-disable-next-line no-undef
-    require("@tailwindcss/typography"), require("daisyui")
+    typography, daisyui
   ],
   daisyui: {
-    themes: false,
+    themes: [
+      {
+        light: {
+          ...light,
+          primary: "#efce03",
+          secondary: "#000000",
+        },
+        dark: {
+          ...dark,
+          primary: "#efce03",
+          secondary: "#ffffff",
+        },
+      },
+    ],
   },
 }

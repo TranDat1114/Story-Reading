@@ -1,11 +1,11 @@
 import HomePage from "@/components/pages/home"
 import { Route, RouteItem } from "@/types/route"
-import { Book, Home, Sparkle } from 'lucide-react'
+import { Book, Dna, Home, Sparkle } from 'lucide-react'
 import NovelsPage from "@/components/pages/novels"
-import genresData from "@/data/genres.json"
 import rankingsData from "@/data/rankings.json"
 import GenrePage from "@components/pages/genres"
-import ReadingPage from "./reading"
+import ReadingPage from "@components/pages/reading"
+import  RankingPage  from "@components/pages/rankings"
 
 const routes: Route[] = [
     {
@@ -25,6 +25,18 @@ const routes: Route[] = [
         name: "novels",
         element: <NovelsPage />,
         icon: <Book size={16} />,
+    },
+    {
+        path: "/rankings/:rankingName",
+        name: "rankings",
+        element: <RankingPage />,
+        icon: <Sparkle size={16} />,
+    },
+    {
+        path: "/genres",
+        name: "genres",
+        element: <GenrePage />,
+        icon: <Dna size={16} />,
     },
     {
         path: "/reading/:bookName",
@@ -51,8 +63,7 @@ const routesNavLink: Route[] = [
         path: "/genres",
         name: "genres",
         element: <GenrePage />,
-        isDropdown: true,
-        dropdownItems: genresData.genres as RouteItem[]
+        icon: <Dna size={16} />,
     },
     {
         path: "/rankings",

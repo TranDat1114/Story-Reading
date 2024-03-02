@@ -6,7 +6,6 @@ interface LayoutProps {
     children: React.ReactNode
 }
 
-
 const Layout = ({ children }: LayoutProps) => {
     return (
         <div className="w-full relative space-y-2">
