@@ -60,7 +60,7 @@ const SignUpSignInModal = () => {
                                     <div className="form-control">
                                         <label className="cursor-pointer label gap-4">
                                             <input type="checkbox" className="checkbox checkbox-accent" />
-                                            <span className="label-text">Tôi đã đọc và đồng ý <a className="link link-info" href="/terms">điều khoản sử dụng</a> và <a className="link link-info" href="/privacy">dịch vụ sử dụng</a> của Website.</span>
+                                            <span className="label-text">Tôi đã đọc và đồng ý <a className="link link-info" href="/terms" target="_bank">điều khoản sử dụng</a> và <a className="link link-info" href="/privacy" target="_bank">bảo mật</a> của Website.</span>
                                         </label>
                                     </div>
                                     <div className="form-control">
