@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { routesNavLink } from "@/components/pages/routes";
 import ThemeToggle from "@/components/ui/theme/theme-toggle";
 import { motion, useScroll, useSpring } from "framer-motion";
-import SignUpSignInModal from "@/components/ui/modal/sign-up-sign-in-modal";
+import  { SignUpSignInButton } from "@/components/ui/modal/sign-up-sign-in-modal";
 
 export default function Header() {
 
@@ -14,7 +14,6 @@ export default function Header() {
         "translation",
         { keyPrefix: "header" }
     )
-
 
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
@@ -82,7 +81,7 @@ export default function Header() {
                                     ))
                                 }
                                 <li>
-                                    <SignUpSignInModal />
+                                    <SignUpSignInButton />
                                 </li>
 
                             </ul>
@@ -128,10 +127,11 @@ export default function Header() {
 
                 </div>
                 <div className="navbar-end items-center gap-2">
-                    <div className="z-50">
 
-                        <SignUpSignInModal/>
+                    <div className="hidden lg:flex ">
+                        <SignUpSignInButton />
                     </div>
+
                     <ThemeToggle />
                 </div>
             </div>

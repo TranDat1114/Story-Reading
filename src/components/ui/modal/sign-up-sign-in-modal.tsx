@@ -3,7 +3,6 @@ import { Tabs, TabList, Tab, TabPanel } from "react-tabs"
 const SignUpSignInModal = () => {
     return (
         <>
-            <button className="btn btn-ghost" onClick={() => (document.getElementById('my_modal_5') as HTMLDialogElement)?.showModal()}>Đăng nhập/Đăng ký</button>
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
                     <Tabs>
@@ -61,7 +60,7 @@ const SignUpSignInModal = () => {
                                     <div className="form-control">
                                         <label className="cursor-pointer label gap-4">
                                             <input type="checkbox" className="checkbox checkbox-accent" />
-                                            <span className="label-text">Tôi đã đọc và đồng ý <a className="link link-info">điều khoản đăng ký</a> và <a className="link link-info">dịch vụ sử dụng</a> của Website.</span>
+                                            <span className="label-text">Tôi đã đọc và đồng ý <a className="link link-info" href="/terms">điều khoản sử dụng</a> và <a className="link link-info" href="/privacy">dịch vụ sử dụng</a> của Website.</span>
                                         </label>
                                     </div>
                                     <div className="form-control">
@@ -81,4 +80,11 @@ const SignUpSignInModal = () => {
         </>
     )
 }
-export default SignUpSignInModal
+
+const SignUpSignInButton = () => {
+    return (
+        <button className="btn btn-outline" onClick={() => (document.getElementById('my_modal_5') as HTMLDialogElement)?.showModal()}>Đăng nhập / Đăng ký</button>
+    )
+}
+
+export { SignUpSignInModal, SignUpSignInButton }
