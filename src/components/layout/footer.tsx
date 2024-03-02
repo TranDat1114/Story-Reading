@@ -23,9 +23,9 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <h6 className="footer-title">{t("support")}</h6>
-                    <a className="link link-hover">{t("faqs")}</a>
-                    <a className="link link-hover">{t("privacy")}</a>
-                    <a className="link link-hover">{t("terms")}</a>
+                    <a className="link link-hover" href="/faqs" target="_blank">{t("faqs")}</a>
+                    <a className="link link-hover" href="/privacy" target="_blank">{t("privacy")}</a>
+                    <a className="link link-hover" href="/terms" target="_blank">{t("terms")}</a>
                 </nav>
                 <nav>
                     <h6 className="footer-title">{t("contact")}</h6>

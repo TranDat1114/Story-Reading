@@ -49,7 +49,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     {slides.map((book, index) => (
                         <div className="embla__slide cursor-pointer flex justify-center lg:justify-end flex-col items-center" key={index}>
                             <Link to={`/reading/${book.name}`} className='book-link'>
-                                <img src={book.img} className="embla__slide__number" alt={book.name + ' Cover'} />
+                                <img src={book.img} className="embla__slide__number" loading='lazy' alt={book.name + ' Cover'} />
                             </Link>
                             <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
                             <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.chapters} tập</p>
