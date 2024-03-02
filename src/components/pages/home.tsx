@@ -41,9 +41,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-<div className="divider">
+            <div className="divider" ref={startedRef}>
 
-</div>
+            </div>
             <EmblaCarousel slides={databooks} options={OPTIONS} title={"Những truyện tranh phổ biết"} />
 
             <div className="divider"></div>
