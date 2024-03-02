@@ -5,7 +5,12 @@ import NovelsPage from "@/components/pages/novels"
 import rankingsData from "@/data/rankings.json"
 import GenrePage from "@components/pages/genres"
 import ReadingPage from "@components/pages/reading"
-import  RankingPage  from "@components/pages/rankings"
+import RankingPage from "@components/pages/rankings"
+import DieuKhoanPage from "./dieukhoan"
+import BaoMatPage from "./baomat"
+import FaqsPage from "./faqs"
+
+
 
 const routes: Route[] = [
     {
@@ -43,6 +48,21 @@ const routes: Route[] = [
         name: "reading",
         element: <ReadingPage />,
         icon: <Book size={16} />,
+    },
+    {
+        path: "/terms",
+        name: "terms",
+        element: <DieuKhoanPage />
+    },
+    {
+        path: "/privacy",
+        name: "privacy",
+        element: <BaoMatPage />
+    },
+    {
+        path: "/faqs",
+        name: "faqs",
+        element: <FaqsPage />
     }
 ]
 
