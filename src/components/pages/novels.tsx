@@ -26,7 +26,7 @@ const NovelsPage = () => {
         setIsUpNarrow(!isUpNarrow);
     };
 
-    //Code tiếp ở đây
+    //Code tiếp ở đây phần cấu hình hiển thị trang chi tiết chương truyện
     const { bookName, chapterName } = useParams<BookDetailParams>();
     const [bookDetails, setBookDetails] = useState<Book | null>(null);
 
