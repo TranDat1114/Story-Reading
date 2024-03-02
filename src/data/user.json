@@ -2,18 +2,21 @@
     "users": [
         {
             "name": "John Doe",
+            "chapter-comment": "Chương 1",
             "contentComment": "Truyện đỉnh của chóp, đọc xong muốn đọc lại",
             "dateComment": "12-12-2017",
             "avatar": "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
         },
         {
             "name": "Gia Bảo",
+            "chapter-comment": "Chương 2",
             "contentComment": "Truyện đỉnh của năm, đọc suy biết bao nhiêu năm",
             "dateComment": "12-12-2017",
             "avatar": "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/331662828_752483269435492_9172027355660816522_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=rH6EgVE0QyAAX_9FLf8&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfD132qpGy5hAwpSKLkm_EzqhvUbT-LScNaBCJ9EBg2A3w&oe=65E679A1"
         },
         {
             "name": "Phú Đạt",
+            "chapter-comment": "Chương 4",
             "contentComment": "Truyện hay, hi vọng tác giả sớm ra mắt truyện mới",
             "dateComment": "12-12-2017",
             "avatar": "https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/414970434_1154744595506765_87452087616537689_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=hgq8j2c-4V8AX92UI_n&_nc_oc=AQla9jutKlaU3WkPnZnl4MDyCKchy7RhY2oXVKaUQmoVsb7h41ZmIajbNdIFYDVghMc&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfAbJyzy1QjMet4uTw3cqLtSu7s38ZHBtEfeXymR2nE4qQ&oe=65E59524"

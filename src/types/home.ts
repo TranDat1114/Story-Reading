@@ -2,9 +2,9 @@ interface Category {
     name: string;
 }
 
-interface newChapter{
+interface newChapter {
     name: string,
-    img : string,
+    img: string,
     views: number,
     likes: number,
     rating: string,
@@ -15,7 +15,10 @@ interface newChapter{
 interface Book {
     img: string,
     name: string,
+    path: string,
     chapters: number,
+    status: string,
+    released: string,
     desc: string,
     views: number,
     likes: number,
