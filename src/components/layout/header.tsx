@@ -128,13 +128,11 @@ export default function Header() {
 
                 </div>
                 <div className="navbar-end items-center gap-2">
+                    <div className="z-50">
 
-                    <div className="hidden md:inline-block">
-                        <SignUpSignInModal />
+                        <SignUpSignInModal/>
                     </div>
-
                     <ThemeToggle />
-
                 </div>
             </div>
             <motion.div className="h-1 rounded-md bg-secondary w-full fixed left-0 right-0" style={{ scaleX, originX: 0 }} initial={false} transition={{ duration: 0.5 }

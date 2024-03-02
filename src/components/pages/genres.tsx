@@ -24,12 +24,7 @@ const GenrePage = () => {
     return (
         <div className="space-y-4">
             {genresName}
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">chương mới - xem ngay!</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Chương Mới - Xem Ngay!" />
             <div className="divider"></div>
             <div className="h-56 container m-auto prose">
                 <h1 className="text-center">
@@ -37,26 +32,11 @@ const GenrePage = () => {
                 </h1>
             </div>
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">top 10 unlock all-time</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock All-time" />
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">top 10 unlock tuần</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock Tuần" />
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Những truyện tranh phổ biến</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Những Truyện Tranh Phổ Biến"/>
             <div className="divider"></div>
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
@@ -74,24 +54,11 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện lãng mạn</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện hành động</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện phiêu lưu</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lãng mạn" />
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện hành động" />
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện phiêu lưu"/>
             <div className="divider"></div>
             <div className="h-56 container m-auto prose">
                 <h1 className="text-center">
@@ -99,24 +66,9 @@ const GenrePage = () => {
                 </h1>
             </div>
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện bí ẩn</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện kinh dị</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện hài hước</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lãng mạn" />
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện kịch tích" />
             <div className="divider"></div>
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
@@ -134,24 +86,9 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện kịch</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện lịch sử</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện hồi hộp</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện kịch"/>
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lịch sử"/>
             <div className="divider"></div>
             <div className="h-56 container m-auto prose">
                 <h1 className="text-center">
@@ -159,30 +96,13 @@ const GenrePage = () => {
                 </h1>
             </div>
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện siêu nhiên</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện học đường</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện đời thường</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện tâm lý</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện siêu nhân"/>
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện học đường"/>
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện đời thường"/>
+            <div className="divider"></div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện tâm lý"/>
             <div className="divider"></div>
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
@@ -200,23 +120,14 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện khoa học viễn tưởng</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
-            <div className="flex items-center flex-col lg:items-start space-y-4">
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer">Truyện võ thuật</p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện khoa học viễn tưởng"/>
             <div className="divider"></div>
-            <div className="w-full pb-8">
-                <div className="space-y-4">
-                    <p className="text-xl font-semibold">Truyện tranh</p>
-                    <p className="desc text-base">Đọc truyện tranh hay nhất, đa dạng thể loại: truyện tranh ngôn tình, truyện tranh đam mỹ, truyện tranh cổ trang...</p>
+                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện võ thuật"/>
+            <div className="divider"></div>
+            <div className="pb-4">
+                <div className="w-full space-y-4">
+                    <p className="font-semibold text-xl">Truyện chữ</p>
+                    <p>Đọc truyện tranh hay nhất, đa dạng thể loại: truyện tranh ngôn tình, truyện tranh đam mỹ, truyện tranh cổ trang...</p>
                 </div>
             </div>
         </div>

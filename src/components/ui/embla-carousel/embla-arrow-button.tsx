@@ -66,7 +66,7 @@ const PrevButton: React.FC<PropType> = (props) => {
 
     return (
         <button
-            className="btn btn-circle btn-outline lg:btn-md"
+            className="btn btn-circle btn-outline btn-sm"
             type="button"
             {...restProps}
         >
@@ -81,7 +81,7 @@ const NextButton: React.FC<PropType> = (props) => {
 
     return (
         <button
-            className="btn btn-circle btn-outline lg:btn-md"
+            className="btn btn-circle btn-outline btn-sm"
             type="button"
             {...restProps}
         >

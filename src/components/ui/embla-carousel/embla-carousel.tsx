@@ -45,53 +45,45 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
     return (
-        <div className="flex items-center flex-col lg:items-start space-y-4" >
-            <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
-                    whileHover={{
-                        scale: 1.2,
-                        transition: {
-                            duration: 1,
-                            ease: "easeInOut"
-                        },
-                    }}
-                    onHoverStart={() => { }}
-                    onHoverEnd={() => { }}
-                >{title}</motion.p>
+        <div className="flex items-center flex-col space-y-4" >
+            <div className='flex justify-between items-center w-full'>
+                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
+                    <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
+                        whileHover={{
+                            scale: 1.2,
+                            transition: {
+                                duration: 1,
+                                ease: "easeInOut"
+                            },
+                        }}
+                        onHoverStart={() => { }}
+                        onHoverEnd={() => { }}
+                    >{title}</motion.p>
+                </div>
+                <div className="embla__buttons justify-items-center gap-x-2 md:gap-x-8 lg:justify-center">
+                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+                </div>
             </div>
+
             <section className="embla">
                 <div className="embla__viewport" ref={emblaRef}>
                     <div className="embla__container space-y-4">
                         {slides.map((book, index) => (
-                            <div className="embla__slide cursor-pointer flex justify-center lg:justify-end flex-col items-center" key={index}>
-                                <Link to={`/reading/${book.name}`} className='book-link'>
-                                    <img src={book.img} className="embla__slide__number" loading='lazy' alt={book.name + ' Cover'} />
+                            <div className="embla__slide cursor-pointer" key={index}>
+                                <Link to={`/reading/${book.name}`} className='book-link' >
+                                    <img src={book.img} className="embla__slide__number w-full object-cover object-center" loading='lazy' alt={book.name + ' Cover'} />
+                                    <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
+                                    <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.chapters}</p>
                                 </Link>
-                                <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
-                                <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.chapters} tập</p>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                <div className=" w-full lg:w-20 mx-auto mt-8">
-                    <div className="embla__buttons justify-items-center gap-x-4 lg:justify-center">
-                        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-                    </div>
-
-                    {/* <div className="embla__dots">
-                    {scrollSnaps.map((_, index) => (
-                        <DotButton
-                            key={index}
-                            onClick={() => onDotButtonClick(index)}
-                            className={'btn btn-circle btn-xs btn-outline'.concat(
-                                index === selectedIndex ? 'active bg-warning' : ''
-                            )}
-                        />
-                    ))}
+                {/* <div className=" w-full lg:w-20 mx-auto mt-8">
+                   
                 </div> */}
-                </div>
             </section>
         </div>
 

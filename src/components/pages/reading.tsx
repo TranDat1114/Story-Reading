@@ -136,7 +136,7 @@ const ReadingPage: React.FC = () => {
                                     <div key={index}>
                                         <div className="flex items-center p-4 mb-4 w-full">
                                             <div className="img mr-4">
-                                                <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-20 md:w-56 h-auto object-cover' />
+                                                <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-20 md:w-56 h-auto object-cover cursor-pointer' />
                                             </div>
                                             <div className="info text-left flex-grow">
                                                 <div className='title'>
@@ -146,7 +146,7 @@ const ReadingPage: React.FC = () => {
                                                     <p>{book.released}</p>
                                                 </div>
                                             </div>
-                                            <div className="price flex items-center">
+                                            <div className="price flex items-center cursor-pointer">
                                                 <p>Miễn phí</p>
                                             </div>
                                         </div>
