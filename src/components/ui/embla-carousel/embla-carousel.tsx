@@ -9,14 +9,16 @@ import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Book } from '@/types/home'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 type PropType = {
     slides: Book[]
-    options?: EmblaOptionsType
+    options?: EmblaOptionsType,
+    title: string
 }
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-    const { slides, options } = props
+    const { slides, options, title } = props
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
     const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
@@ -43,28 +45,42 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
     return (
-        <section className="embla">
-            <div className="embla__viewport" ref={emblaRef}>
-                <div className="embla__container space-y-4">
-                    {slides.map((book, index) => (
-                        <div className="embla__slide cursor-pointer flex justify-center lg:justify-end flex-col items-center" key={index}>
-                            <Link to={`/reading/${book.name}`} className='book-link'>
-                                <img src={book.img} className="embla__slide__number" loading='lazy' alt={book.name + ' Cover'} />
-                            </Link>
-                            <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
-                            <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.chapters} tập</p>
-                        </div>
-                    ))}
-                </div>
+        <div className="flex items-center flex-col lg:items-start space-y-4" >
+            <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
+                <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
+                    whileHover={{
+                        scale: 1.2,
+                        transition: {
+                            duration: 1,
+                            ease: "easeInOut"
+                        },
+                    }}
+                    onHoverStart={() => { }}
+                    onHoverEnd={() => { }}
+                >{title}</motion.p>
             </div>
-
-            <div className=" w-full lg:w-20 mx-auto mt-8">
-                <div className="embla__buttons justify-items-center gap-x-4 lg:justify-center">
-                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+            <section className="embla">
+                <div className="embla__viewport" ref={emblaRef}>
+                    <div className="embla__container space-y-4">
+                        {slides.map((book, index) => (
+                            <div className="embla__slide cursor-pointer flex justify-center lg:justify-end flex-col items-center" key={index}>
+                                <Link to={`/reading/${book.name}`} className='book-link'>
+                                    <img src={book.img} className="embla__slide__number" loading='lazy' alt={book.name + ' Cover'} />
+                                </Link>
+                                <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
+                                <p className='text-base line-clamp-2 font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.chapters} tập</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                {/* <div className="embla__dots">
+                <div className=" w-full lg:w-20 mx-auto mt-8">
+                    <div className="embla__buttons justify-items-center gap-x-4 lg:justify-center">
+                        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+                    </div>
+
+                    {/* <div className="embla__dots">
                     {scrollSnaps.map((_, index) => (
                         <DotButton
                             key={index}
@@ -75,8 +91,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                         />
                     ))}
                 </div> */}
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
+
     )
 }
 

@@ -38,28 +38,15 @@ const HomePage = () => {
                         </div>
                         <div className="flex gap-x-4 justify-center lg:justify-start">
                             <button className="btn btn-primary btn-md" onClick={() => scrollToElement(startedRef)}>Bắt đầu nào</button>
-                            <button className="btn btn-primary btn-md" onClick={() => scrollToElement(startedRef)}><Heart/> Yêu thích</button>
+                            <button className="btn btn-primary btn-md" onClick={() => scrollToElement(startedRef)}><Heart /> Yêu thích</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="flex items-center flex-col lg:items-start space-y-4" ref={startedRef}>
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
-                        whileHover={{
-                            scale: 1.2,
-                            transition: {
-                                duration: 1,
-                                ease: "easeInOut"
-                            },
-                        }}
-                        onHoverStart={() => { }}
-                        onHoverEnd={() => { }}
-                    >Những truyện tranh phổ biến</motion.p>
-                </div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} />
-            </div>
+
+            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Những truyện tranh phổ biết"} />
+
             <div className="divider"></div>
             <div className="h-32 container m-auto prose">
                 <h1 className="text-center">
