@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
             <Header />
             <main className="container mx-auto min-h-svh space-y-2">
                 <div className="mt-20 w-full">
-                <Breadcrumbs />
+                    <Breadcrumbs />
                 </div>
                 {children}
             </main>

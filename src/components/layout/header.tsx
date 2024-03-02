@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { routesNavLink } from "@/components/pages/routes";
 import ThemeToggle from "@/components/ui/theme/theme-toggle";
 import { motion, useScroll, useSpring } from "framer-motion";
-import SignUpSignInModal from "../ui/modal/sign-up-sign-in-modal";
+import SignUpSignInModal from "@/components/ui/modal/sign-up-sign-in-modal";
 
 export default function Header() {
 
@@ -28,12 +28,12 @@ export default function Header() {
     const menuIcon = useRef<HTMLLabelElement>(null);
 
     return (
-        <motion.header className={`px-2 w-full rounded-md backdrop-blur-lg backdrop-contrast-100 backdrop-brightness-75 shadow-lg top-0 fixed z-50 transition-all drop-shadow-md`}
-        style={{
-            backgroundColor: scrollYProgress > 0 ? "#000" : "#fff",
-            // Các thuộc tính khác của thanh header
-        }}
-            initial={false} transition={{ duration: 0.5 }}
+        <motion.header className={`px-2 w-full rounded-md backdrop-blur-lg backdrop-contrast-100 backdrop-brightness-75 shadow-lg top-0 fixed z-50 drop-shadow-md transition-colors duration-300 ease-in-out`}
+            style={
+                {
+                    backgroundColor: `${scrollYProgress.get() > 0.1 ? "var(--bg-base-100)" : "transparent"}`
+                }
+            }
         >
             <div className="navbar p-2 container mx-auto">
                 <div className="navbar-start flex items-center gap-2 justify-between">

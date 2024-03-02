@@ -2,7 +2,7 @@ import { Tabs, TabList, Tab, TabPanel } from "react-tabs"
 
 const SignUpSignInModal = () => {
     return (
-        <>
+        <div>
             <button className="btn btn-ghost" onClick={() => (document.getElementById('my_modal_5') as HTMLDialogElement)?.showModal()}>Đăng nhập/Đăng ký</button>
             <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
@@ -78,7 +78,7 @@ const SignUpSignInModal = () => {
                     </div>
                 </div>
             </dialog>
-        </>
+        </div>
     )
 }
 export default SignUpSignInModal
