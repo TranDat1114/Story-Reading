@@ -147,22 +147,24 @@ export default function Header() {
                                         <Tab>Đăng ký</Tab>
                                     </TabList>
                                     <TabPanel>
-                                        <div className="card shrink-0 w-full shadow-2xl bg-base-100">
-                                            <form className="card-body">
+                                        <div className="card shrink-0 w-full h-[30rem] shadow-2xl bg-base-100">
+                                            <h1 className="font-semibold mx-8 text-2xl mt-6">Đăng nhập</h1>
+                                            <p className="text-base-content mt-2 mx-8">Đăng nhập để trải nghiệm tốt nhất.</p>
+                                            <form className="card-body pt-8">
                                                 <div className="form-control">
                                                     <label className="label">
-                                                        <span className="label-text">Email</span>
+                                                        <span className="label-text font-semibold">Email</span>
                                                     </label>
                                                     <input type="email" placeholder="Email" className="input input-bordered" required />
                                                 </div>
                                                 <div className="form-control">
                                                     <label className="label">
-                                                        <span className="label-text">Mật khẩu</span>
+                                                        <span className="label-text font-semibold">Mật khẩu</span>
                                                     </label>
                                                     <input type="password" placeholder="Mật khẩu của bạn" className="input input-bordered" required />
-                                                    <label className="label">
+                                                    {/* <label className="label">
                                                         <a href="#" className="label-text-alt link link-hover">Quên mật khẩu?</a>
-                                                    </label>
+                                                    </label> */}
                                                 </div>
                                                 <div className="form-control mt-6">
                                                     <button className="btn btn-primary">Đăng nhập</button>
@@ -171,7 +173,7 @@ export default function Header() {
                                         </div>
                                     </TabPanel>
                                     <TabPanel>
-                                        <div className="card shrink-0 w-full shadow-2xl bg-base-100">
+                                        <div className="card shrink-0 w-full h-[30rem] shadow-2xl bg-base-100">
                                             <form className="card-body">
                                                 <div className="form-control">
                                                     <label className="label">
@@ -193,7 +195,7 @@ export default function Header() {
                                                 </div>
                                                 <div className="form-control">
                                                     <label className="cursor-pointer label gap-4">
-                                                        <input type="checkbox" defaultChecked className="checkbox checkbox-accent" />
+                                                        <input type="checkbox" className="checkbox checkbox-accent" />
                                                         <span className="label-text">Tôi đã đọc và đồng ý <a className="link link-info">điều khoản đăng ký</a> và <a className="link link-info">dịch vụ sử dụng</a> của Website.</span>
                                                     </label>
                                                 </div>
