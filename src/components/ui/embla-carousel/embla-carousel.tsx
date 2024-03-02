@@ -74,7 +74,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                                 <Link to={`/novels/${book.path}`} className='book-link' >
                                     <img src={book.img} className="embla__slide__number w-full object-cover object-center" loading='lazy' alt={book.name + ' Cover'} />
                                     <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
-                                    <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.chapters}</p>
+                                    <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.lastChapter}</p>
                                 </Link>
                             </div>
                         ))}

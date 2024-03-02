@@ -6,7 +6,31 @@
             "path": "your-name",
             "status": "completed",
             "released": "2016-08-26",
-            "chapters": 5,
+            "lastChapter": 5,
+            "chapters": [
+                {
+                    "title": "Chapter 1: The Beginning",
+                    "path": "/chapter-1-the-beginning",
+                    "content": "Your Name (Japanese: 君の名は。, Hepburn: Kimi no Na wa), sometimes stylized as Your Name., is a 2016 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films and distributed by Toho. It depicts the story of high school students Taki Tachibana and Mitsuha Miyamizu, who suddenly begin to swap bodies despite having never met, unleashing chaos on each other's lives. The film was inspired by the frequency of natural disasters in Japan. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis incidunt veniam iste quaerat nostrum et, eos id beatae recusandae atque esse doloribus minus placeat illo temporibus voluptate ipsum officiis! Officiis totam sequi doloribus? Ipsum amet explicabo assumenda laborum quo, blanditiis aperiam quis necessitatibus excepturi aspernatur accusamus quaerat laboriosam molestias nulla ducimus alias voluptatibus unde fugiat vero temporibus, illo corrupti libero dignissimos aut? Fugiat dolorum quibusdam saepe suscipit eligendi alias inventore culpa non expedita sed nostrum voluptate quisquam, possimus minima quia facere eos nulla consequatur provident magni ex molestias sint id perspiciatis! Eos porro harum ea molestiae, cum exercitationem fugiat voluptates nobis ipsa odio consequatur nam. Laborum provident consectetur explicabo voluptas cupiditate, atque ducimus tenetur dolore distinctio et aliquam beatae, error cumque deserunt magnam nostrum dolores pariatur veniam vero facere dicta iure. Quisquam corporis perspiciatis exercitationem! Voluptatibus esse id recusandae? Ab dolorem temporibus sapiente deleniti neque corporis rerum. Cum, iure, ut velit commodi ratione, ullam cumque ab repudiandae alias officiis culpa exercitationem voluptatibus quas quisquam. Necessitatibus ducimus mollitia quisquam magni officia voluptatum consectetur libero consequatur non voluptate. Excepturi, autem rerum dolorum quo rem repudiandae. Deleniti mollitia voluptates soluta quas laboriosam accusamus inventore placeat maiores consequatur obcaecati! Dignissimos nisi aliquid earum alias quidem repellendus porro illum quis tempora accusamus dolor suscipit cumque enim, iusto iste ratione voluptatem facere animi hic magnam sed accusantium fugit! Enim maiores error sint doloribus, quisquam voluptates maxime nobis incidunt doloremque dolorem fuga, iusto amet facere earum voluptas, atque illum. Alias perferendis voluptatibus voluptatum placeat repellat similique nulla? Assumenda obcaecati illo repellat sint quos quisquam, laboriosam ab, voluptatibus ex dolorum iure sunt officia quae praesentium consequuntur! Ea eos distinctio quasi et magnam non quod, magni fugiat amet est temporibus adipisci quam, numquam dolore repellat aperiam libero! Totam suscipit fuga nostrum optio, quos ducimus repellendus, quas inventore officiis itaque temporibus modi reprehenderit nam voluptate ex? Incidunt harum illo quo repellat? Qui, ipsa distinctio aliquam expedita asperiores suscipit? Explicabo voluptatibus voluptatum vel molestias architecto mollitia totam sint, repellendus fugiat expedita, nemo velit qui nostrum nesciunt quia. Porro et doloribus ex nisi quasi. Nemo provident iusto vero tempore, molestias exercitationem explicabo, laudantium placeat quia quisquam aliquid sed doloremque delectus debitis consequuntur repellat ex atque minus sit facere accusamus sequi soluta cum reprehenderit. Harum esse voluptatem quod provident temporibus? Rerum earum autem nulla voluptatum. Quos exercitationem eaque, quam aliquid officiis odio rem odit eum, ex facilis aperiam eveniet! Officia in recusandae impedit vero esse at omnis repudiandae placeat quaerat cum vel reiciendis, nostrum, delectus sint harum, ullam rem non. Debitis quod dolores minus? Porro deleniti placeat amet cumque tenetur voluptatibus qui libero voluptates odio, at nam nihil ipsam eius recusandae? Nisi est quis minima possimus ipsam non porro voluptatibus ducimus excepturi neque officia aut sapiente doloribus, ea id molestias quae culpa libero quisquam iste harum distinctio eaque sunt ipsa? Ad, adipisci. Odio minus optio dignissimos quibusdam omnis nam rerum, repellendus qui laboriosam laborum mollitia consectetur sunt, porro fugit, rem inventore obcaecati deleniti sed veritatis. Alias ipsum ipsam distinctio est iure explicabo reiciendis.",
+                    "views": 529,
+                    "likes": 100,
+                    "rating": "4.95/5",
+                    "released": "2016-08-26",
+                    "prevChapter": null,
+                    "nextChapter": "/chapter-2-the-meeting"
+                },
+                {
+                    "title": "Chapter 2: The Meeting",
+                    "path": "/chapter-2-the-meeting",
+                    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis incidunt veniam iste quaerat nostrum et, eos id beatae recusandae atque esse doloribus minus placeat illo temporibus voluptate ipsum officiis! Officiis totam sequi doloribus? Ipsum amet explicabo assumenda laborum quo, blanditiis aperiam quis necessitatibus excepturi aspernatur accusamus quaerat laboriosam molestias nulla ducimus alias voluptatibus unde fugiat vero temporibus, illo corrupti libero dignissimos aut? Fugiat dolorum quibusdam saepe suscipit eligendi alias inventore culpa non expedita sed nostrum voluptate quisquam, possimus minima quia facere eos nulla consequatur provident magni ex molestias sint id perspiciatis! Eos porro harum ea molestiae, cum exercitationem fugiat voluptates nobis ipsa odio consequatur nam. Laborum provident consectetur explicabo voluptas cupiditate, atque ducimus tenetur dolore distinctio et aliquam beatae, error cumque deserunt magnam nostrum dolores pariatur veniam vero facere dicta iure. Quisquam corporis perspiciatis exercitationem! Voluptatibus esse id recusandae? Ab dolorem temporibus sapiente deleniti neque corporis rerum. Cum, iure, ut velit commodi ratione, ullam cumque ab repudiandae alias officiis culpa exercitationem voluptatibus quas quisquam. Necessitatibus ducimus mollitia quisquam magni officia voluptatum consectetur libero consequatur non voluptate. Excepturi, autem rerum dolorum quo rem repudiandae. Deleniti mollitia voluptates soluta quas laboriosam accusamus inventore placeat maiores consequatur obcaecati! Dignissimos nisi aliquid earum alias quidem repellendus porro illum quis tempora accusamus dolor suscipit cumque enim, iusto iste ratione voluptatem facere animi hic magnam sed accusantium fugit! Enim maiores error sint doloribus, quisquam voluptates maxime nobis incidunt doloremque dolorem fuga, iusto amet facere earum voluptas, atque illum. Alias perferendis voluptatibus voluptatum placeat repellat similique nulla? Assumenda obcaecati illo repellat sint quos quisquam, laboriosam ab, voluptatibus ex dolorum iure sunt officia quae praesentium consequuntur! Ea eos distinctio quasi et magnam non quod, magni fugiat amet est temporibus adipisci quam, numquam dolore repellat aperiam libero! Totam suscipit fuga nostrum optio, quos ducimus repellendus, quas inventore officiis itaque temporibus modi reprehenderit nam voluptate ex? Incidunt harum illo quo repellat? Qui, ipsa distinctio aliquam expedita asperiores suscipit? Explicabo voluptatibus voluptatum vel molestias architecto mollitia totam sint, repellendus fugiat expedita, nemo velit qui nostrum nesciunt quia. Porro et doloribus ex nisi quasi. Nemo provident iusto vero tempore, molestias exercitationem explicabo, laudantium placeat quia quisquam aliquid sed doloremque delectus debitis consequuntur repellat ex atque minus sit facere accusamus sequi soluta cum reprehenderit. Harum esse voluptatem quod provident temporibus? Rerum earum autem nulla voluptatum. Quos exercitationem eaque, quam aliquid officiis odio rem odit eum, ex facilis aperiam eveniet! Officia in recusandae impedit vero esse at omnis repudiandae placeat quaerat cum vel reiciendis, nostrum, delectus sint harum, ullam rem non. Debitis quod dolores minus? Porro deleniti placeat amet cumque tenetur voluptatibus qui libero voluptates odio, at nam nihil ipsam eius recusandae? Nisi est quis minima possimus ipsam non porro voluptatibus ducimus excepturi neque officia aut sapiente doloribus, ea id molestias quae culpa libero quisquam iste harum distinctio eaque sunt ipsa? Ad, adipisci. Odio minus optio dignissimos quibusdam omnis nam rerum, repellendus qui laboriosam laborum mollitia consectetur sunt, porro fugit, rem inventore obcaecati deleniti sed veritatis. Alias ipsum ipsam distinctio est iure explicabo reiciendis.",
+                    "views": 529,
+                    "likes": 100,
+                    "rating": "4.95/5",
+                    "released": "2016-08-26",
+                    "prevChapter": "/chapter-1-the-beginning",
+                    "nextChapter": "/chapter-3-the-encounter"
+                }
+            ],
             "views": 529,
             "likes": 100,
             "rating": "4.95/5",
@@ -22,48 +46,6 @@
                 {
                     "name": "Fantasy"
                 }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Beginning",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: The Meeting",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: The Connection",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: The Disaster",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: The End",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                }
             ]
         },
         {
@@ -74,9 +56,10 @@
             "released": "2016-08-26",
             "views": 529,
             "likes": 100,
+            "chapters": [],
             "author": "Shinkai Makoto",
             "rating": "4.95/5",
-            "chapters": 5,
+            "lastChapter": 5,
             "desc": "Suzume (Japanese: すずめの戸締まり, Hepburn: Suzume no Tojimari, lit. 'Suzume's Locking Up') is a 2022 Japanese animated coming-of-age fantasy adventure film written and directed by Makoto Shinkai, produced by CoMix Wave Films, and distributed by Toho. The film follows 17-year-old high school girl Suzume Iwato and young stranger Souta Munakata, who team up to prevent a series of disasters across Japan by sealing doors from the colossal, supernatural worm that causes earthquakes after being released.",
             "categories": [
                 {
@@ -88,48 +71,6 @@
                 {
                     "name": "Fantasy"
                 }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Beginning",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Suzume_no_Tojimari_poster.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: The Meeting",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Suzume_no_Tojimari_poster.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: The Connection",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Suzume_no_Tojimari_poster.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: The Disaster",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Suzume_no_Tojimari_poster.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: The End",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/7/7f/Suzume_no_Tojimari_poster.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                }
             ]
         },
         {
@@ -140,9 +81,10 @@
             "views": 529,
             "released": "2016-08-26",
             "rating": "4.95/5",
+            "chapters": [],
             "likes": 100,
             "author": "Andrzej Sapkowski",
-            "chapters": 5,
+            "lastChapter": 5,
             "desc": "The Witcher (Polish: Wiedźmin, pronounced [ˈvjɛd͡ʑmin]) is a series of six fantasy novels and 15 short stories written by Polish author Andrzej Sapkowski. The series revolves around the eponymous witcher, Geralt of Rivia.",
             "categories": [
                 {
@@ -154,48 +96,6 @@
                 {
                     "name": "Fantasy"
                 }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Beginning",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/3/33/Wiedzmin_1990.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: The Meeting",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/3/33/Wiedzmin_1990.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: The Connection",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/3/33/Wiedzmin_1990.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: The Disaster",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/3/33/Wiedzmin_1990.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: The End",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/3/33/Wiedzmin_1990.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                }
             ]
         },
         {
@@ -204,11 +104,12 @@
             "path": "gods-kojima",
             "status": "comming-soon",
             "released": "2016-08-26",
+            "chapters": [],
             "views": 529,
             "rating": "4.95/5",
             "likes": 100,
             "author": "Hideo Kojima",
-            "chapters": 5,
+            "lastChapter": 5,
             "desc": "Hideo Kojima (小島 秀夫, Kojima Hideo, born August 24, 1963) is a Japanese video game designer. He is regarded as an auteur of video games.[2] He developed a strong passion for film and literature during his childhood and adolescence. In 1986, he was hired by Konami, for which he designed and wrote Metal Gear (1987) for the MSX2, a game that laid the foundations for stealth games and the Metal Gear series, his best known and most appreciated works. At Konami, he also produced the Zone of the Enders series, as well as wrote and designed Snatcher (1988) and Policenauts (1994), graphic adventure games regarded for their cinematic presentation.",
             "categories": [
                 {
@@ -223,48 +124,6 @@
                 {
                     "name": "Story Telling"
                 }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Beginning",
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Konami_4th_logo_1.svg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: Leaving",
-                    "img": "https://cdn.mos.cms.futurecdn.net/Dypx6C5PhL9gNuf8JLtQTV.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: Silent Hill PT",
-                    "img": "https://wallpapertag.com/wallpaper/full/b/c/7/691945-free-download-silent-hill-wallpapers-1920x1080.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: Metal Gear Solid V: The Phantom Pain",
-                    "img": "https://cdn.wccftech.com/wp-content/uploads/2015/12/Metal-Gear-Solid-V-The-Phantom-Pain-Themes.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: Death Stranding",
-                    "img": "https://wallpapercave.com/wp/wp7072370.png",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                }
             ]
         },
         {
@@ -274,10 +133,11 @@
             "status": "comming-soon",
             "rating": "4.95/5",
             "released": "2016-08-26",
+            "chapters": [],
             "views": 529,
             "likes": 100,
             "author": "Shinkai Makoto",
-            "chapters": 5,
+            "lastChapter": 5,
             "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him.",
             "categories": [
                 {
@@ -288,48 +148,6 @@
                 },
                 {
                     "name": "Fantasy"
-                }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Beginning",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: The Meeting",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: The Connection",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: The Disaster",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: The End",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
                 }
             ]
         },
@@ -342,8 +160,9 @@
             "rating": "4.95/5",
             "released": "2016-08-26",
             "likes": 100,
+            "chapters": [],
             "author": "Vince Gilligan",
-            "chapters": 5,
+            "lastChapter": 5,
             "desc": "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan for AMC. Set and filmed in Albuquerque, New Mexico, the series follows Walter White (Bryan Cranston), an underpaid, dispirited high-school chemistry teacher struggling with a recent diagnosis of stage-three lung cancer. White turns to a life of crime and partners with a former student, Jesse Pinkman (Aaron Paul), to produce and distribute methamphetamine to secure his family's financial future before he dies, while navigating the dangers of the criminal underworld. Breaking Bad premiered on AMC on January 20, 2008, and concluded on September 29, 2013, after five seasons consisting of 62 episodes.",
             "categories": [
                 {
@@ -364,48 +183,6 @@
                 {
                     "name": "Crime"
                 }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Season 1: The Beginning",
-                    "img": "https://th.bing.com/th/id/R.886a6f4b7e994eca7c3655d2ddd83a7b?rik=xNS%2b5MKOhJnuMQ&riu=http%3a%2f%2fgeekroniques.fr%2fwp-content%2fuploads%2f2011%2f04%2fgroupe-1.jpg&ehk=oGI%2f6x4e4JjPpoIZphvFODYbZ16Si6ctCNc0ksICXtw%3d&risl=&pid=ImgRaw&r=0",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Season 2: The Meeting",
-                    "img": "https://th.bing.com/th/id/OIP.gVQ19m0IiX5gXxzT3xVT9QAAAA?rs=1&pid=ImgDetMain",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Season 3: The Connection",
-                    "img": "https://th.bing.com/th/id/OIP.4aEtwYXKXNhIEybiWfDtPwHaHa?rs=1&pid=ImgDetMain",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Season 4: The Disaster",
-                    "img": "https://th.bing.com/th/id/R.db62f2449a5e7622ff190a2e506f081e?rik=h6eEnGlQOLqjQw&pid=ImgRaw&r=0",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Season 5: The End",
-                    "img": "https://images-na.ssl-images-amazon.com/images/I/91Haj+bA9sL._RI_.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                }
             ]
         },
         {
@@ -416,9 +193,10 @@
             "views": 529,
             "released": "2016-08-26",
             "rating": "4.95/5",
+            "chapters": [],
             "likes": 100,
             "author": "Walter Wild",
-            "chapters": 5,
+            "lastChapter": 5,
             "desc": "Futbol Club Barcelona (Catalan pronunciation: [fubˈbɔl ˈklub bəɾsəˈlonə]), commonly referred to as Barcelona and colloquially known as Barça ([ˈbaɾsə]), is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top flight of Spanish football.",
             "categories": [
                 {
@@ -426,48 +204,6 @@
                 },
                 {
                     "name": "History"
-                }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Beginning",
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/2/24/Walter_Wild.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: Club de Fútbol Barcelona",
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/3/30/LuisSuarezMiramontes1960.webp",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: Guardiola era",
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/6/6b/FC_Barcelona_Team_2%2C_2011.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: Bartomeu era",
-                    "img": "https://upload.wikimedia.org/wikipedia/commons/9/96/El_Camp_Nou_en_un_partido_de_la_Uefa_Champions_League.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: The End of Era",
-                    "img": "https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2021-08/lionel-messi-fc-barcelona-august-8-2021_k68gw0xpdt6c1gb9tt3xccuhp.jpg?itok=Hq-Ktg-p",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "15-08-2021"
                 }
             ]
         },
@@ -480,8 +216,9 @@
             "rating": "4.95/5",
             "released": "2016-08-26",
             "likes": 100,
+            "chapters": [],
             "author": "Stan Lee",
-            "chapters": 149,
+            "lastChapter": 149,
             "desc": "Spider-Man is a superhero appearing in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and artist Steve Ditko, he first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books. He has been featured in comic books, television shows, films, video games, novels, and plays.",
             "categories": [
                 {
@@ -498,48 +235,6 @@
                 },
                 {
                     "name": "Adventure"
-                }
-            ],
-            "nameChapters": [
-                {
-                    "name": "Chapter 1: The Amazing Spider-Man",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/3/35/Amazing_Fantasy_15.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 2: The Transformation",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/b/bd/Issue252.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 3: The Enemy",
-                    "img": "https://upload.wikimedia.org/wikipedia/en/b/b3/Spider-Man_characters.jpeg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 4: The Disaster",
-                    "img": "https://th.bing.com/th/id/R.6d5dfb89346427b7c0f9727080e4f179?rik=tZfClReZ6WbnMg&riu=http%3a%2f%2fimg.chelmerfineart.com%2foriginal%2fthe-amazing-spider-man-001-21205.jpg&ehk=57cawBO7bsNAnrel0XS5%2fSgcjou2C1R86%2fuLeKaLNxg%3d&risl=&pid=ImgRaw&r=0",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
-                },
-                {
-                    "name": "Chapter 5: The Clone Saga",
-                    "img": "https://2.bp.blogspot.com/-syJu4Ev_F7M/Vnp66Xe53JI/AAAAAAAASjA/-suVzSTxBTM/s0-Ic42/RCO010.jpg",
-                    "views": 529,
-                    "likes": 100,
-                    "rating": "4.95/5",
-                    "released": "2016-08-26"
                 }
             ]
         }

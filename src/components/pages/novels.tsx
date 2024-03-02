@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import booksData from '@/data/books.json';
 import { Book } from '@/types/home.ts';
@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 
 interface BookDetailParams {
     bookName: string;
+    chapterName: string;
     [key: string]: string | undefined;
 }
 
@@ -25,7 +26,8 @@ const NovelsPage = () => {
         setIsUpNarrow(!isUpNarrow);
     };
 
-    const { bookName } = useParams<BookDetailParams>();
+    //Code tiếp ở đây
+    const { bookName, chapterName } = useParams<BookDetailParams>();
     const [bookDetails, setBookDetails] = useState<Book | null>(null);
 
     useEffect(() => {
@@ -37,7 +39,7 @@ const NovelsPage = () => {
             const updatedBook: Book = {
                 ...selectedBook,
                 categories: selectedBook.categories || [],
-                nameChapters: selectedBook.nameChapters || [],
+                chapters: selectedBook.chapters || [],
             };
             setBookDetails(updatedBook);
 
@@ -93,7 +95,7 @@ const NovelsPage = () => {
                                     <div className="views flex justify-center flex-col lg:flex-row items-center gap-2">
                                         <NotebookText size={16} />
                                         <p className='font-semibold text-primary'>
-                                            {bookDetails.chapters}
+                                            {bookDetails.lastChapter}
                                         </p>
                                         <strong>
                                             Chương
@@ -132,7 +134,9 @@ const NovelsPage = () => {
                             </div>
                         </div>
                         <div className='w-full lg:justify-start justify-center flex gap-x-2 text-white'>
-                            <button className="btn btn-sm btn-outline btn-info">Đọc từ đầu</button>
+                            <Link to={
+                                `/novels/${bookDetails.path}${bookDetails.chapters[0].path}`
+                            } className="btn btn-sm btn-outline btn-info">Đọc ngay</Link>
                             <button className="btn btn-sm btn-outline btn-info">Chương mới</button>
                             <button className="btn btn-sm btn-outline btn-info">Theo dõi</button>
                         </div>
@@ -184,17 +188,28 @@ const NovelsPage = () => {
             </div>
             <div className='mx-auto max-w-xl lg:max-w-4xl rounded-box bg-base-200 md:p-4'>
                 <Tabs>
-                    <TabList>
-                        <Tab>Danh sách chương</Tab>
-                        <Tab>Bình luận</Tab>
-                        <Tab>Đánh giá</Tab>
+                    <TabList className={
+                        `flex items-center justify-evenly gap-4 p-4 bg-base-100 rounded-box shadow-lg`
+
+                    }>
+                        <Tab className={
+                            `cursor-pointer text-center focus:text-info text-lg font-semibold bg-transparent`
+                        }>Danh sách chương</Tab>
+                        <Tab className={
+                            `cursor-pointer text-center focus:text-info text-lg font-semibold bg-transparent`
+                        }>Bình luận</Tab>
+                        <Tab className={
+                            `cursor-pointer text-center focus:text-info text-lg font-semibold bg-transparent`
+                        }>Đánh giá</Tab>
                     </TabList>
-                    <TabPanel>
+                    <TabPanel className={
+                        `p-4 bg-base-200 rounded-box shadow-lg`
+                    }>
                         <div className='space-y-4'>
                             <div className='flex items-center justify-between'>
                                 <div className='flex flex-col'>
                                     <div className='title'>
-                                        <p className='font-bold'>{bookDetails.chapters} chương</p>
+                                        <p className='font-bold'>{bookDetails.lastChapter} chương</p>
                                     </div>
                                     <div>
                                         <p>Truyện phát hành mỗi ngày!</p>
@@ -208,15 +223,15 @@ const NovelsPage = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                {bookDetails.nameChapters.map((book, index) => (
+                                {bookDetails.chapters?.map((book, index) => (
                                     <div key={index}>
                                         <div className="flex items-center p-4 mb-4 w-full">
                                             <div className="img mr-4">
-                                                <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-20 h-auto object-cover cursor-pointer' />
+                                                {/* <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-20 h-auto object-cover cursor-pointer' /> */}
                                             </div>
                                             <div className="info text-left flex-grow">
                                                 <div className='title'>
-                                                    <p className='font-bold cursor-pointer hover:text-orange-500'>{book.name}</p>
+                                                    <p className='font-bold cursor-pointer hover:text-orange-500'>{book.title}</p>
                                                 </div>
                                                 <div className="date italic">
                                                     <p>{book.released}</p>
@@ -232,7 +247,9 @@ const NovelsPage = () => {
                             </div>
                         </div>
                     </TabPanel>
-                    <TabPanel>
+                    <TabPanel className={
+                        `p-4 bg-base-200 rounded-box shadow-lg`
+                    }>
                         <div className='space-y-4'>
                             <div className='flex items-center w-full'>
                                 <div className="avatar mr-4">
@@ -281,7 +298,9 @@ const NovelsPage = () => {
                             </div>
                         </div>
                     </TabPanel>
-                    <TabPanel>
+                    <TabPanel className={
+                        `p-4 bg-base-200 rounded-box shadow-lg`
+                    }>
                         <div>
                             <h1>Đánh giá</h1>
                         </div>
