@@ -78,7 +78,7 @@ const routesNavLink: Route[] = [
         icon: <Home size={16} />,
     },
     {
-        path: "/genres",
+        path: "/novels",
         name: "genres",
         icon: <Dna size={16} />,
     },
