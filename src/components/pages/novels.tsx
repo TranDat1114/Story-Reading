@@ -9,11 +9,6 @@ import userData from '@/data/user.json';
 import Ads from "@components/ui/banner/ads";
 import { useTranslation } from "react-i18next";
 
-interface BookDetailParams {
-    bookName: string;
-    chapterName: string;
-    [key: string]: string | undefined;
-}
 
 const NovelsPage = () => {
     const { t } = useTranslation("translation", {
@@ -26,25 +21,13 @@ const NovelsPage = () => {
         setIsUpNarrow(!isUpNarrow);
     };
 
-    const { bookName } = useParams<BookDetailParams>();
-    const [bookDetails, setBookDetails] = useState<Book | null>(null);
+    const { bookName } = useParams<{ bookName: string }>();
+
+    const [bookDetails, setBookDetails] = useState<Book | undefined>(undefined);
 
     useEffect(() => {
-        const selectedBook = booksData.books.find((book) => book.path === bookName);
-        if (selectedBook) {
-
-            //* có thêm field thì update ở đây
-
-            const updatedBook: Book = {
-                ...selectedBook,
-                categories: selectedBook.categories || [],
-                chapters: selectedBook.chapters || [],
-            };
-            setBookDetails(updatedBook);
-
-            //*
-        }
-    }, [bookName]);
+        setBookDetails(booksData.books.find((book) => book.path === bookName));
+    }, [bookDetails, bookName])
 
     const [isHideDetails, setIsHideDetails] = useState(true);
 
@@ -133,9 +116,13 @@ const NovelsPage = () => {
                             </div>
                         </div>
                         <div className='w-full lg:justify-start justify-center flex gap-x-2 text-white'>
-                            <Link to={
-                                `/novels/${bookDetails.path}${bookDetails.chapters[0].path}`
-                            } className="btn btn-sm btn-outline btn-info">Đọc ngay</Link>
+                            {
+                                bookDetails.chapters.length > 0 &&
+                                <Link to={
+                                    `/novels/${bookDetails.path}/${bookDetails.chapters[0].path ?? ""}`
+                                } className="btn btn-sm btn-outline btn-info">Đọc ngay</Link>
+                            }
+
                             <button className="btn btn-sm btn-outline btn-info">Chương mới</button>
                             <button className="btn btn-sm btn-outline btn-info">Theo dõi</button>
                         </div>
