@@ -44,7 +44,10 @@ const NovelsPage = () => {
     const [isHideDetails, setIsHideDetails] = useState(true);
 
     if (!bookDetails) {
-        return <div>Loading...</div>;
+        return
+        <div>
+            <LoadingSpinner />
+        </div>;
         // code Thêm trang loading ở đây
     }
 
