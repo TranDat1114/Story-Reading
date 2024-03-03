@@ -3,8 +3,6 @@ import React, { useEffect, useState } from 'react';
 import booksData from '@/data/books.json';
 import { Book } from '@/types/home.ts';
 import {  Glasses, NotebookText, ThumbsUp } from 'lucide-react';
-
-import 'react-tabs/style/react-tabs.css';
 // import userData from '@/data/user.json';
 import Ads from "@components/ui/banner/ads";
 import { useTranslation } from "react-i18next";
@@ -155,7 +153,7 @@ const NovelsPage = () => {
                             <h1 className="text-2xl font-bold">Nội dung tương tự</h1>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full not-prose">
                                 {
-                                    booksData.books.map((book, index) => (
+                                    booksData.books.slice(0,4).map((book, index) => (
                                         <div key={index} className="flex items-center justify-center flex-col w-full">
                                             <div className="img">
                                                 <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-28 h-40 object-cover cursor-pointer' />
