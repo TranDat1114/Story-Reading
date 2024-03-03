@@ -10,6 +10,7 @@ import BaoMatPage from "./baomat"
 import FaqsPage from "./faqs"
 import NotFound404Page from "./not-found-404"
 import NovelChapterPage from "./novel-chapter"
+import ProfilePage from "./profile"
 
 
 
@@ -21,7 +22,7 @@ const routes: Route[] = [
     },
     {
         path: '/novels',
-        name: 'novels',
+        name: 'genres',
         element: <GenrePage />,
     },
     {
@@ -68,6 +69,11 @@ const routes: Route[] = [
         path: "/*",
         name: "not-found-404",
         element: <NotFound404Page />
+    },
+    {
+        path: "/profile",
+        name: "profile",
+        element: <ProfilePage />
     }
 ]
 

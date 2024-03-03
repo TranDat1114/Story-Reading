@@ -3,10 +3,12 @@
 // import { useEffect, useState } from "react";
 // import { Chapter } from "@/types/home";
 const NovelChapterPage = () => {
-    
 
     return (
-        <div>
+        <div className="prose mx-auto">
+            <h1>Đang được phát triển</h1>
+
+            
         </div>
     );
 }
