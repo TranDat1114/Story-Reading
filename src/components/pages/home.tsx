@@ -44,7 +44,7 @@ const HomePage = () => {
             <div className="divider" ref={startedRef}>
 
             </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Những truyện tranh phổ biết"} />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Những truyện tranh phổ biế"} />
 
             <div className="divider"></div>
             <div className="h-32 container m-auto prose">
@@ -58,7 +58,10 @@ const HomePage = () => {
             <div className="divider">
                 💖
             </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện phổ biến" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong ngày" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong tuần" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong tháng" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong năm" />
             <div className="divider"></div>
             <div className="h-32 container m-auto prose">
                 <h1 className="text-center">

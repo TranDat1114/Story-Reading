@@ -2,6 +2,7 @@ import booksData from '@/data/books.json';
 import { Book } from '@/types/home.ts';
 import usersData from '@/data/user.json';
 import { Users } from '@/types/users';
+import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
     const books: Book[] = booksData.books;
@@ -19,7 +20,9 @@ const ProfilePage = () => {
                                         <>
                                             <div key={index} className='flex items-center gap-4 mx-4'>
                                                 <div className="img">
-                                                    <img src={book.img} alt={book.name + 'Cover'} className="max-w-48 rounded-md object-center bg-center cursor-pointer" />
+                                                    <Link to={`/novels/${book.path}`}>
+                                                        <img src={book.img} alt={book.name + 'Cover'} className="max-w-48 rounded-md object-center bg-center cursor-pointer" />
+                                                    </Link>
                                                 </div>
                                                 <div className="flex flex-col space-y-2">
                                                     <div className="title">
