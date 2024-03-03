@@ -172,21 +172,20 @@ const NovelsPage = () => {
             <div className="bg-base-200 p-4 flex justify-evenly items-center h-40">
                 <Ads />
             </div>
-            <div className='mx-auto max-w-xl lg:max-w-4xl rounded-box bg-base-200 md:p-4'>
-                <Tabs>
+            {/* <div className='w-full mx-auto max-w-xl lg:max-w-4xl rounded-box md:p-4'>
+                <Tabs className={
+                    "tabs tabs-boxed"
+                }>
                     <TabList className={
                         `flex items-center justify-evenly gap-4 p-4 bg-base-100 rounded-box shadow-lg`
-
                     }>
                         <Tab className={
-                            `cursor-pointer text-center focus:text-info text-lg font-semibold bg-transparent`
+                            `cursor-pointer tab text-center focus:text-info lg:text-lg text-sm  font-semibold bg-transparent btn btn-md btn-outline text-secondary`
                         }>Danh sách chương</Tab>
                         <Tab className={
-                            `cursor-pointer text-center focus:text-info text-lg font-semibold bg-transparent`
+                            `cursor-pointer tab text-center focus:text-info lg:text-lg text-sm font-semibold bg-transparent btn btn-md btn-outline text-secondary`
                         }>Bình luận</Tab>
-                        <Tab className={
-                            `cursor-pointer text-center focus:text-info text-lg font-semibold bg-transparent`
-                        }>Đánh giá</Tab>
+
                     </TabList>
                     <TabPanel className={
                         `p-4 bg-base-200 rounded-box shadow-lg`
@@ -213,7 +212,7 @@ const NovelsPage = () => {
                                     <div key={index}>
                                         <div className="flex items-center p-4 mb-4 w-full">
                                             <div className="img mr-4">
-                                                {/* <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-20 h-auto object-cover cursor-pointer' /> */}
+                                              
                                             </div>
                                             <div className="info text-left flex-grow">
                                                 <div className='title'>
@@ -257,17 +256,18 @@ const NovelsPage = () => {
                                                 <img alt="Tailwind CSS chat bubble component" src={user.avatar} />
                                             </div>
                                         </div>
-                                        <div className="chat-header ">
+                                        <div className="flex w-full justify-between gap-4 items-center">
                                             <div className="chat-name font-semibold">
                                                 {user.name}
+                                            </div>
+                                            <div className="chapter text-xs font-semibold text-gray-500">
+                                                {user["chapter-comment"]}
                                             </div>
                                         </div>
                                         <div className="chat-bubble">{user.contentComment}</div>
                                         <div className='chat-footer flex items-center gap-4'>
                                             <time className="text-xs opacity-50">{user.dateComment}</time>
-                                            <div className="chapter text-xs text-gray-500">
-                                                {user["chapter-comment"]}
-                                            </div>
+
                                             <p>Thích</p>
                                             <p>Trả lời</p>
                                             <div className="dropdown dropdown-bottom">
@@ -284,15 +284,9 @@ const NovelsPage = () => {
                             </div>
                         </div>
                     </TabPanel>
-                    <TabPanel className={
-                        `p-4 bg-base-200 rounded-box shadow-lg`
-                    }>
-                        <div>
-                            <h1>Đánh giá</h1>
-                        </div>
-                    </TabPanel>
+
                 </Tabs>
-            </div>
+            </div> */}
         </div>
     );
 };
