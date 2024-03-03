@@ -12,6 +12,7 @@ export default defineConfig({
       '@data': '/src/data',
       "@languages": "/src/languages",
       "@types": "/src/types",
+      "@share": "/src/share",
     }
   }
 })

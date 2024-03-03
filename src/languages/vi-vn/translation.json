@@ -30,7 +30,23 @@
             "title": "Trang chủ"
         },
         "novels": {
-            "title": "Truyện"
+            "title": "Truyện",
+            "all": "Tất cả",
+            "latest": "Mới nhất",
+            "most_viewed": "Xem nhiều nhất",
+            "most_fav": "Yêu thích nhất",
+            "most_rated": "Đánh giá",
+            "most_commented": "Bình luận nhiều nhất",
+            "most_recent": "Gần đây",
+            "most_popular": "Phổ biến",
+            "most_read": "Đọc nhiều nhất",
+            "most_liked": "Thích nhiều nhất",
+            "completed": "Hoàn thành",
+            "comming_soon": "Sắp ra mắt",
+            "on-going": "Đang tiến hành",
+            "genres": "Thể loại",
+            "search": "Tìm kiếm",
+            "search_placeholder": "Tìm kiếm truyện"
         },
         "genres": {
             "title": "Thể loại",

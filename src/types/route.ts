@@ -1,7 +1,7 @@
 interface Route {
     name: string;
     path: string;
-    element: React.ReactNode;
+    element?: React.ReactNode;
     icon?: React.ReactNode;
     isParam?: boolean;
     isDropdown?: boolean;

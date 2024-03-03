@@ -2,27 +2,35 @@ interface Category {
     name: string;
 }
 
-interface newChapter{
-    name: string,
-    img : string,
+
+
+interface Chapter {
+    title: string,
+    content: string,
+    nextChapter: string | null,
+    prevChapter: string | null,
+    released: string,
+    path: string,
     views: number,
     likes: number,
     rating: string,
-    released: string,
-}
 
+}
 
 interface Book {
     img: string,
     name: string,
-    chapters: number,
+    path: string,
+    chapters: Chapter[],
+    status: string,
+    released: string,
     desc: string,
     views: number,
     likes: number,
     author: string,
     rating: string,
     categories: Category[];
-    nameChapters: newChapter[];
+    lastChapter: number;
 }
 
-export type { Book, Category, newChapter }
+export type { Book, Category, Chapter }

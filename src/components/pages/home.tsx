@@ -24,11 +24,11 @@ const HomePage = () => {
 
     return (
         <div className="w-full">
-            <div className="hero rounded-box relative bg-[url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images')] my-4">
+            <div className="hero rounded-box relative my-4">
+                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images" className="absolute  w-full h-full object-cover rounded-box" ></img>
                 <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
                 <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images" className="shadow-2xl w-full max-w-xl rounded-lg bg-transparent object-cover max-h-96" />
-
+                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.zerochan.net%2FDoraemon.full.610553.jpg&f=1&nofb=1&ipt=eeeac466b9cf271b2ac48e9f55c928bd67162d9b8fab38b8405299a47bfc00a5&ipo=images" className="shadow-2xl max-w-xl rounded-lg bg-transparent object-cover max-h-96" />
                     <div className="lg:w-1/2">
                         <div className="prose my-8">
                             <h1 className="text-primary text-center lg:text-start">Truyện chữ</h1>

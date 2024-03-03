@@ -2,12 +2,14 @@ import Footer from "@/components/layout/footer"
 import Header from "@/components/layout/header"
 import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import { SignUpSignInModal } from "@/components/ui/modal/sign-up-sign-in-modal"
+import ScrollToTop from "@/share/scroll-to-top"
 
 interface LayoutProps {
     children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => {
+    ScrollToTop()
     return (
         <div className="w-full relative space-y-2">
             <Header />

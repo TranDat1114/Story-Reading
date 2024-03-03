@@ -1,12 +1,12 @@
 
 import { useRef } from "react";
 import { useTranslation } from "react-i18next"
-import { Contact, Menu, X } from "lucide-react";
+import { Contact, Menu, Search, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { routesNavLink } from "@/components/pages/routes";
 import ThemeToggle from "@/components/ui/theme/theme-toggle";
 import { motion, useScroll, useSpring } from "framer-motion";
-import  { SignUpSignInButton } from "@/components/ui/modal/sign-up-sign-in-modal";
+import { SignUpSignInButton } from "@/components/ui/modal/sign-up-sign-in-modal";
 
 export default function Header() {
 
@@ -28,11 +28,11 @@ export default function Header() {
 
     return (
         <motion.header className={`px-2 w-full rounded-md backdrop-blur-lg backdrop-contrast-100 bg-base-100 shadow-lg top-0 fixed z-50 drop-shadow-md transition-colors duration-300 ease-in-out`}
-            // style={
-            //     {
-            //         backgroundColor: `${scrollYProgress.get() > 0 ? "var(--bg-base-100)" : "transparent"}`
-            //     }
-            // }
+        // style={
+        //     {
+        //         backgroundColor: `${scrollYProgress.get() > 0 ? "var(--bg-base-100)" : "transparent"}`
+        //     }
+        // }
         >
             <div className="navbar p-2 container mx-auto">
                 <div className="navbar-start flex items-center gap-2 justify-between">
@@ -83,7 +83,11 @@ export default function Header() {
                                 <li>
                                     <SignUpSignInButton />
                                 </li>
-
+                                <li>
+                                    <div className="form-control">
+                                        <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -123,11 +127,14 @@ export default function Header() {
                                 </li>
                             ))
                         }
+
                     </ul>
 
                 </div>
                 <div className="navbar-end items-center gap-2">
-
+                    <button className="btn btn-ghost btn-square">
+                        <Search size={24} />
+                    </button>
                     <div className="hidden lg:flex ">
                         <SignUpSignInButton />
                     </div>
