@@ -3,6 +3,7 @@ import Header from "@/components/layout/header"
 import { Breadcrumbs } from "@/components/ui/breadcrumbs"
 import { SignUpSignInModal } from "@/components/ui/modal/sign-up-sign-in-modal"
 import ScrollToTop from "@/share/scroll-to-top"
+import { SearchInputModal } from "../ui/search input/searchInput"
 
 interface LayoutProps {
     children: React.ReactNode
@@ -20,6 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
                 {children}
             </main>
             <Footer />
+            <SearchInputModal />
             <SignUpSignInModal />
         </div>
     )

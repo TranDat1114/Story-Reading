@@ -1,14 +1,20 @@
 
 import { useRef } from "react";
 import { useTranslation } from "react-i18next"
-import { Contact, Menu, Search, X } from "lucide-react";
+import { Contact, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { routesNavLink } from "@/components/pages/routes";
 import ThemeToggle from "@/components/ui/theme/theme-toggle";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { SignUpSignInButton } from "@/components/ui/modal/sign-up-sign-in-modal";
+import { SearchInputButton } from "../ui/search input/searchInput";
 
 export default function Header() {
+
+    // const [isSearchInputVisible, setIsSearchInputVisible] = useState(false);
+    // const handleSearchIconClick = () => {
+    //     setIsSearchInputVisible(!isSearchInputVisible);
+    // };
 
     const { t } = useTranslation(
         "translation",
@@ -81,12 +87,10 @@ export default function Header() {
                                     ))
                                 }
                                 <li>
-                                    <SignUpSignInButton />
+                                    <SearchInputButton />
                                 </li>
                                 <li>
-                                    <div className="form-control">
-                                        <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
-                                    </div>
+                                    <SignUpSignInButton />
                                 </li>
                             </ul>
                         </div>
@@ -132,9 +136,9 @@ export default function Header() {
 
                 </div>
                 <div className="navbar-end items-center gap-2">
-                    <button className="btn btn-ghost btn-square">
-                        <Search size={24} />
-                    </button>
+                    <div >
+                        <SearchInputButton />
+                    </div>
                     <div className="hidden lg:flex ">
                         <SignUpSignInButton />
                     </div>
