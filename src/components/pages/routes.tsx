@@ -1,6 +1,6 @@
 import HomePage from "@/components/pages/home"
 import { Route, RouteItem } from "@/types/route"
-import { Book, Dna, Home, Sparkle } from 'lucide-react'
+import { Dna, Home, Sparkle } from 'lucide-react'
 import NovelsPage from "@/components/pages/novels"
 import rankingsData from "@/data/rankings.json"
 import GenrePage from "@components/pages/genres"
@@ -9,6 +9,7 @@ import DieuKhoanPage from "./dieukhoan"
 import BaoMatPage from "./baomat"
 import FaqsPage from "./faqs"
 import NotFound404Page from "./not-found-404"
+import NovelChapterPage from "./novel-chapter"
 
 
 
@@ -21,7 +22,12 @@ const routes: Route[] = [
     {
         path: '/novels',
         name: 'novels',
-        element: <NovelsPage />,
+        element: <GenrePage />,
+    },
+    {
+        path: "/novels/?genres=:genreName",
+        name: "genres",
+        element: <GenrePage />
     },
     {
         path: "/novels/:bookName",
@@ -31,17 +37,12 @@ const routes: Route[] = [
     {
         path: "/novels/:novelName/:chapterNumber",
         name: "novels",
-        element: <NovelsPage />,
+        element: <NovelChapterPage />,
     },
     {
         path: "/rankings/:rankingName",
         name: "rankings",
         element: <RankingPage />,
-    },
-    {
-        path: "/genres",
-        name: "genres",
-        element: <GenrePage />
     },
     {
         path: "/terms",
@@ -75,11 +76,6 @@ const routesNavLink: Route[] = [
         path: '/',
         name: 'home',
         icon: <Home size={16} />,
-    },
-    {
-        path: '/novels',
-        name: 'novels',
-        icon: <Book size={16} />,
     },
     {
         path: "/genres",

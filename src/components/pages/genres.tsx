@@ -6,12 +6,10 @@ import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
 import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
-import { useParams } from "react-router-dom";
-
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 const GenrePage = () => {
-    const { genresName } = useParams();
+  
 
     const databooks: Book[] = BookData.books;
 
@@ -23,8 +21,7 @@ const GenrePage = () => {
     };
     return (
         <div className="space-y-4">
-            {genresName}
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Chương Mới - Xem Ngay!" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Chương Mới - Xem Ngay!" />
             <div className="divider"></div>
             <div className="h-56 container m-auto prose">
                 <h1 className="text-center">
@@ -32,11 +29,11 @@ const GenrePage = () => {
                 </h1>
             </div>
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock All-time" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock All-time" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock Tuần" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock Tuần" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Những Truyện Tranh Phổ Biến"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Những Truyện Tranh Phổ Biến" />
             <div className="divider"></div>
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
@@ -54,11 +51,11 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lãng mạn" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lãng mạn" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện hành động" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện hành động" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện phiêu lưu"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện phiêu lưu" />
             <div className="divider"></div>
             <div className="h-56 container m-auto prose">
                 <h1 className="text-center">
@@ -66,9 +63,9 @@ const GenrePage = () => {
                 </h1>
             </div>
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lãng mạn" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lãng mạn" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện kịch tích" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện kịch tích" />
             <div className="divider"></div>
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
@@ -86,9 +83,9 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện kịch"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện kịch" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lịch sử"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện lịch sử" />
             <div className="divider"></div>
             <div className="h-56 container m-auto prose">
                 <h1 className="text-center">
@@ -96,13 +93,13 @@ const GenrePage = () => {
                 </h1>
             </div>
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện siêu nhân"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện siêu nhân" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện học đường"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện học đường" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện đời thường"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện đời thường" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện tâm lý"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện tâm lý" />
             <div className="divider"></div>
             <div className="hero bg-base-200 my-4 p-4">
                 <div className="hero-content flex-col lg:flex-row gap-x-12 ">
@@ -120,9 +117,9 @@ const GenrePage = () => {
                 </div>
             </div>
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện khoa học viễn tưởng"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện khoa học viễn tưởng" />
             <div className="divider"></div>
-                <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện võ thuật"/>
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện võ thuật" />
             <div className="divider"></div>
             <div className="pb-4">
                 <div className="w-full space-y-4">
