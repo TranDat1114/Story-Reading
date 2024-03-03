@@ -22,7 +22,7 @@ const routes: Route[] = [
     },
     {
         path: '/novels',
-        name: 'novels',
+        name: 'genres',
         element: <GenrePage />,
     },
     {

@@ -11,6 +11,7 @@ interface Chapter {
     prevChapter: string | null,
     released: string,
     path: string,
+    desc: string,
     views: number,
     likes: number,
     rating: string,
