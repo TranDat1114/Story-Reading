@@ -45,7 +45,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
     return (
-        <div className="flex items-center flex-col space-y-4" >
+        <div className="flex items-center flex-col space-y-4 w-full">
             <div className='flex justify-between items-center w-full'>
                 <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
                     <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
@@ -72,7 +72,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                         {slides.map((book, index) => (
                             <div className="embla__slide cursor-pointer" key={index}>
                                 <Link to={`/novels/${book.path}`} className='book-link' >
-                                    <img src={book.img} className="embla__slide__number w-full object-cover object-center" loading='lazy' alt={book.name + ' Cover'} />
+                                    <img src={book.img} className="embla__slide__number object-cover object-center" loading='lazy' alt={book.name + ' Cover'} />
                                     <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
                                     <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.lastChapter}</p>
                                 </Link>
@@ -80,10 +80,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                         ))}
                     </div>
                 </div>
-
-                {/* <div className=" w-full lg:w-20 mx-auto mt-8">
-                   
-                </div> */}
             </section>
         </div>
 
