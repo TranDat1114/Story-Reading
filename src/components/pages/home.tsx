@@ -1,5 +1,4 @@
-
-import BookData from "@/data/books.json"
+import BookData from "@/data/books.json";
 import { Book } from "@/types/home";
 
 import "@components/ui/embla-carousel/embla.css"
@@ -9,11 +8,13 @@ import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
 
 import React, { useRef } from 'react';
 import { Heart } from "lucide-react";
+import NewBooksUpdate from "../ui/booksUpdate/newBooksUpdate";
+import FullBooksUpdate from "../ui/booksUpdate/fullBooksUpdate";
 
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 const HomePage = () => {
-    const databooks: Book[] = BookData.books;
+    const databooks: Book[] = BookData.books as Book[];
 
     const startedRef = useRef<HTMLDivElement>(null);
     const scrollToElement = (ref: React.RefObject<HTMLDivElement>) => {
@@ -44,8 +45,7 @@ const HomePage = () => {
             <div className="divider" ref={startedRef}>
 
             </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Truyện phổ biến"} />
-
+            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Truyện đề cử"} />
             <div className="divider">😘</div>
             <div className="h-32 container m-auto prose">
                 <h1 className="text-center">
@@ -54,28 +54,31 @@ const HomePage = () => {
             </div>
             <div className="divider"></div>
 
-            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Tập mới - xem ngay"} />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title={"Truyện yêu thích mỗi tuần"} />
             <div className="divider">
                 💖
             </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong ngày" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="Bảng xếp hạng truyện vip" />
             <div className="divider">
                 💖
             </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong tuần" />
+            <EmblaCarousel slides={databooks} options={OPTIONS} title="truyện HOT mới ra lò" />
             <div className="divider">
                 💖
             </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong tháng" />
-            <div className="divider">
-                💖
-            </div>
-            <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện nổi bật trong năm" />
-            <div className="divider">💕</div>
-            <div className="h-32 container m-auto prose">
-                <h1 className="text-center">
-                    Quảng cáo ở đây
-                </h1>
+            <div className="md:grid md:grid-cols-4">
+                <div className="md:col-span-3 space-y-4">
+                    <h1 className="text-xl md:text-2xl font-bold">Truyện mới cập nhật</h1>
+                    <div className="border border-solid border-[#f1f2f3] rounded-lg p-4">
+                        <NewBooksUpdate />
+                    </div>
+                </div>
+                <div className="space-y-4">
+                    <h1 className="text-xl md:text-2xl font-bold">Truyện đã Full</h1>
+                    <div className="border border-solid border-[#f1f2f3] rounded-lg p-4">
+                        <FullBooksUpdate />
+                    </div>
+                </div>
             </div>
         </div>
     );

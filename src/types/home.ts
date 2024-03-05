@@ -30,8 +30,9 @@ interface Book {
     likes: number,
     author: string,
     rating: string,
+    lastChapter: string;
     categories: Category[];
-    lastChapter: number;
+    timeReleased: number;
 }
 
 export type { Book, Category, Chapter }
