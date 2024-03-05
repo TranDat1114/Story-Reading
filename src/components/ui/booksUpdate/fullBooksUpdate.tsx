@@ -15,8 +15,10 @@ const FullBooksUpdate = () => {
                                 <p className="font-semibold text-xl hover:text-orange-500 transition-all duration-300">{book.name}</p>
                             </Link>
                             <div className="flex flex-wrap gap-4">
+                                <span key={index} className="badge badge-success">{book.status}</span>
+
                                 {book.categories.map((category, index) => (
-                                    <p key={index} className="text-xs bg-primary text-white rounded-md px-2 py-1 mr-2">{category.name}</p>
+                                    <span key={index} className="badge badge-warning">{category.name}</span>
                                 ))}
 
                             </div>

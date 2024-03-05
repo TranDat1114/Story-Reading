@@ -33,10 +33,10 @@ const NewBooksUpdate = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="category md:col-span-4">
+                            <div className="category space-x-4 md:col-span-4">
                                 <div className="flex flex-wrap gap-4">
                                     {book.categories.map((category, index) => (
-                                        <p key={index} className="text-xs md:text-base bg-primary text-white rounded-md px-2 py-1 mr-2">{category.name}</p>
+                                        <span key={index} className="badge badge-warning">{category.name}</span>
                                     ))}
                                 </div>
                             </div>
