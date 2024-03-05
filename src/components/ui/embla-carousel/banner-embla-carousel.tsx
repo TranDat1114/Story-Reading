@@ -89,16 +89,18 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
                         ))}
                     </div>
                 </div>
-                <div className="embla__dots space-x-2">
-                    {scrollSnaps.map((_, index) => (
-                        <DotButton
-                            key={index}
-                            onClick={() => onDotButtonClick(index)}
-                            className={'badge badge-outline badge-xs '.concat(
-                                index === selectedIndex ? 'active bg-warning' : ''
-                            )}
-                        />
-                    ))}
+                <div className='w-full flex justify-center'>
+                    <div className="embla__dots space-x-2">
+                        {scrollSnaps.map((_, index) => (
+                            <DotButton
+                                key={index}
+                                onClick={() => onDotButtonClick(index)}
+                                className={'badge badge-outline badge-xs '.concat(
+                                    index === selectedIndex ? 'active bg-warning' : ''
+                                )}
+                            />
+                        ))}
+                    </div>
                 </div>
             </section>
         </div>
