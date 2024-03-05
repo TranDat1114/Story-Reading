@@ -11,27 +11,32 @@ const NewBooksUpdate = () => {
             <div className="w-full space-y-4">
                 {databooks.map((book, index) => (
                     <>
-                        <div className="grid grid-cols-3 items-center gap-4 mx-2" key={index}>
+                        <div className="grid grid-cols-3 md:grid-cols-8 items-center gap-4 mx-2" key={index}>
                             <Link to={`/novels/${book.path}`} >
-                                <img src={book.img} alt={book.name + 'Cover'} className="w-24 md:w-48 h-auto object-center bg-center rounded-md cursor-pointer" />
+                                <img src={book.img} alt={book.name + 'Cover'} className="w-24 h-auto object-center bg-center rounded-md cursor-pointer" />
                             </Link>
-                            <div className="info">
-                                <div className="title">
-                                    <p className="font-semibold cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out">{book.name}</p>
-                                </div>
-                                <div className="author">
-                                    <p className="text-sm cursor-pointer">{book.author}</p>
-                                </div>
-                                <div className="chapter">
-                                    <p className="font-semibold cursor-pointer">
-                                        {book.lastChapter}
-                                    </p>
+                            <div className="info md:col-span-3">
+                                <div className="flex flex-col">
+                                    <div className="title">
+                                        <p className="font-semibold md:text-2xl cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out">{book.name}</p>
+                                    </div>
+                                    <div className="author">
+                                        <p className="text-sm md:text-base cursor-pointer">{book.author}</p>
+                                    </div>
+                                    <div className="chapter">
+                                        <p className="font-semibold cursor-pointer">
+                                            {book.lastChapter}
+                                        </p>
+                                    </div>
+                                    <div className="date hidden md:block">
+                                        <p className="text-sm">{book.timeReleased} phút trước</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="category">
+                            <div className="category md:col-span-4">
                                 <div className="flex flex-wrap gap-4">
                                     {book.categories.map((category, index) => (
-                                        <p key={index} className="text-xs bg-primary text-white rounded-md px-2 py-1 mr-2">{category.name}</p>
+                                        <p key={index} className="text-xs md:text-base bg-primary text-white rounded-md px-2 py-1 mr-2">{category.name}</p>
                                     ))}
                                 </div>
                             </div>
