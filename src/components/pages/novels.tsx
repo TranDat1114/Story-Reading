@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import booksData from '@/data/books.json';
 import { Book } from '@/types/home.ts';
-import {  Glasses, NotebookText, ThumbsUp } from 'lucide-react';
+import { Glasses, NotebookText, ThumbsUp } from 'lucide-react';
 // import userData from '@/data/user.json';
 import Ads from "@components/ui/banner/ads";
 import { useTranslation } from "react-i18next";
@@ -57,7 +57,7 @@ const NovelsPage = () => {
                     <div className={`hero rounded-box relative w-full my-4`}>
                         <img src={`${bookDetails.img}`} className="absolute w-full h-full object-cover rounded-box" alt={bookDetails.name + 'Cover'} />
                         <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
-                   
+
                         <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
                             <img src={bookDetails.img} className="shadow-2xl max-w-sm rounded-lg bg-transparent object-cover max-h-96" alt={bookDetails.name + 'Cover'} />
 
@@ -89,6 +89,9 @@ const NovelsPage = () => {
                                             <div className="views flex justify-center flex-col lg:flex-row items-center gap-2">
                                                 <NotebookText size={16} />
                                                 <p className='font-semibold text-primary'>
+                                                    <span>
+                                                        Chương: &nbsp;
+                                                    </span>
                                                     {bookDetails.lastChapter}
                                                 </p>
                                                 <strong>
@@ -153,7 +156,7 @@ const NovelsPage = () => {
                             <h1 className="text-2xl font-bold">Nội dung tương tự</h1>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full not-prose">
                                 {
-                                    booksData.books.slice(0,4).map((book, index) => (
+                                    booksData.books.slice(0, 4).map((book, index) => (
                                         <div key={index} className="flex items-center justify-center flex-col w-full">
                                             <div className="img">
                                                 <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-28 h-40 object-cover cursor-pointer' />
@@ -189,7 +192,7 @@ const NovelsPage = () => {
                                         <Link to={`/novels/${bookDetails.path}/${chapter.path}`} key={index} className="w-full prose hover:bg-base-100 p-4 rounded-box">
                                             <div className="">
                                                 <div className="flex justify-start gap-x-2 items-center">
-                                                 
+
                                                     <h6 className="text-lg font-bold text-primary">Chương {index + 1}:</h6>
                                                     <p className="text-sm line-clamp-1">{chapter.title}</p>
                                                 </div>

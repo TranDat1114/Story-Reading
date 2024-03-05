@@ -30,7 +30,7 @@ interface Book {
     likes: number,
     author: string,
     rating: string,
-    lastChapter: string;
+    lastChapter: number;
     categories: Category[];
     timeReleased: number;
 }

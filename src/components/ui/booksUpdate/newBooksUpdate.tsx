@@ -25,6 +25,10 @@ const NewBooksUpdate = () => {
                                     </div>
                                     <div className="chapter">
                                         <p className="font-semibold cursor-pointer">
+
+                                            <span>
+                                                Chương: &nbsp;
+                                            </span>
                                             {book.lastChapter}
                                         </p>
                                     </div>
