@@ -79,8 +79,8 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
                                                 <h4 className="text-white line-clamp-4">Trang web đọc truyện này cung cấp một trải nghiệm độc đáo và thú vị cho độc giả, với bộ sưu tập đa dạng của các thể loại truyện, từ hài hước đến kinh điển.</h4>
                                             </div>
                                             <div className="flex gap-x-4 justify-center lg:justify-start">
-                                                <Link to={"/"} className="btn btn-primary btn-md" >Đọc ngay</Link>
-                                                <Link to={"/"} className="btn btn-primary btn-md"><Heart /> Yêu thích</Link>
+                                                <button className="btn btn-primary btn-md" >Đọc ngay</button>
+                                                <button className="btn btn-primary btn-md"><Heart /> Yêu thích</button>
                                             </div>
                                         </div>
                                     </div>
