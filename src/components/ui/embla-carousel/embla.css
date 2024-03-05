@@ -1,5 +1,5 @@
 .embla {
-    max-width: 48rem;
+    max-width: 100%;
     margin: auto;
     --slide-height: 19rem;
     --slide-spacing: 2rem;
@@ -8,35 +8,47 @@
 
 @media only screen and (max-width: 420px) {
     .embla {
-        max-width: 100%;
-        --slide-size: 50%;
-        --slide-height: 20rem;
-        --slide-spacing: 1.5rem;
+
+        --slide-size: 29%;
+        --slide-height: 8rem;
+        --slide-spacing: 0.5rem;
     }
 }
 
 @media screen and (min-width: 420px) and (max-width: 719px) {
     .embla {
-        max-width: 100%;
-        --slide-size: 33%;
-        --slide-height: 17rem;
+
+        --slide-size: 25%;
+        --slide-height: 10rem;
+        --slide-spacing: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+
+    .embla {
+
+        --slide-size: 27%;
+        --slide-height: 15rem;
         --slide-spacing: 0.5rem;
     }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
     .embla {
-        max-width: 100%;
+
         --slide-size: 20%;
         --slide-height: 18rem;
-        --slide-spacing: 2.5rem;
+        --slide-spacing: 1rem;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .embla {
-        max-width: 100%;
-        --slide-size: 20%;
+
+        --slide-size: 15%;
+        --slide-height: 18rem;
+        --slide-spacing: 1rem;
     }
 
 }
@@ -61,7 +73,7 @@
 
 .embla__slide__number {
     box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-    border-radius: 1.8rem;
+    border-radius: 1rem;
     font-size: 4rem;
     font-weight: 600;
     display: flex;

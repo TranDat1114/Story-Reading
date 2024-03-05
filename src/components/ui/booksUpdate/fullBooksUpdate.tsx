@@ -9,8 +9,8 @@ const FullBooksUpdate = () => {
         <>
             <div className="w-full space-y-4">
                 {databooks.map((book, index) => (
-                    <>
-                        <div className="flex flex-col space-y-4 mx-4" key={index}>
+                    <div key={index}>
+                        <div className="flex flex-col space-y-4 mx-4" >
                             <Link to={`/novels/${book.path}`} >
                                 <p className="font-semibold text-xl hover:text-orange-500 transition-all duration-300">{book.name}</p>
                             </Link>
@@ -24,7 +24,7 @@ const FullBooksUpdate = () => {
                             </div>
                         </div>
                         <div className="divider"></div>
-                    </>
+                    </div>
                 ))}
             </div>
         </>

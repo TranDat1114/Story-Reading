@@ -10,8 +10,8 @@ const NewBooksUpdate = () => {
         <>
             <div className="w-full space-y-4">
                 {databooks.map((book, index) => (
-                    <>
-                        <div className="grid grid-cols-3 md:grid-cols-8 items-center gap-4 mx-2" key={index}>
+                    <div key={index}>
+                        <div className="grid grid-cols-3 md:grid-cols-8 items-center gap-4 mx-2" >
                             <Link to={`/novels/${book.path}`} >
                                 <img src={book.img} alt={book.name + 'Cover'} className="w-24 h-auto object-center bg-center rounded-md cursor-pointer" />
                             </Link>
@@ -42,7 +42,7 @@ const NewBooksUpdate = () => {
                             </div>
                         </div>
                         <div className="divider"></div>
-                    </>
+                    </div>
                 ))}
             </div>
         </>
