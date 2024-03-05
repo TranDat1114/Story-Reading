@@ -6,6 +6,13 @@
     --slide-size: 33%;
 }
 
+.banner-embla {
+    --slide-size: 100%;
+    --slide-height: 100%;
+    --slide-spacing: 1rem;
+
+}
+
 @media only screen and (max-width: 420px) {
     .embla {
 
@@ -13,6 +20,8 @@
         --slide-height: 8rem;
         --slide-spacing: 0.5rem;
     }
+
+    
 }
 
 @media screen and (min-width: 420px) and (max-width: 719px) {
