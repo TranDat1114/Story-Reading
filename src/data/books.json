@@ -35,6 +35,7 @@
             ],
             "views": 529,
             "likes": 100,
+            "timeReleased": 24,
             "rating": "4.95/5",
             "author": "Shinkai Makoto",
             "desc": "Your Name (Japanese: 君の名は。, Hepburn: Kimi no Na wa), sometimes stylized as Your Name., is a 2016 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films and distributed by Toho. It depicts the story of high school students Taki Tachibana and Mitsuha Miyamizu, who suddenly begin to swap bodies despite having never met, unleashing chaos on each other's lives. The film was inspired by the frequency of natural disasters in Japan.",
@@ -62,6 +63,7 @@
             "author": "Shinkai Makoto",
             "rating": "4.95/5",
             "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "Suzume (Japanese: すずめの戸締まり, Hepburn: Suzume no Tojimari, lit. 'Suzume's Locking Up') is a 2022 Japanese animated coming-of-age fantasy adventure film written and directed by Makoto Shinkai, produced by CoMix Wave Films, and distributed by Toho. The film follows 17-year-old high school girl Suzume Iwato and young stranger Souta Munakata, who team up to prevent a series of disasters across Japan by sealing doors from the colossal, supernatural worm that causes earthquakes after being released.",
             "categories": [
                 {
@@ -87,6 +89,7 @@
             "likes": 100,
             "author": "Andrzej Sapkowski",
             "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "The Witcher (Polish: Wiedźmin, pronounced [ˈvjɛd͡ʑmin]) is a series of six fantasy novels and 15 short stories written by Polish author Andrzej Sapkowski. The series revolves around the eponymous witcher, Geralt of Rivia.",
             "categories": [
                 {
@@ -112,6 +115,7 @@
             "likes": 100,
             "author": "Hideo Kojima",
             "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "Hideo Kojima (小島 秀夫, Kojima Hideo, born August 24, 1963) is a Japanese video game designer. He is regarded as an auteur of video games.[2] He developed a strong passion for film and literature during his childhood and adolescence. In 1986, he was hired by Konami, for which he designed and wrote Metal Gear (1987) for the MSX2, a game that laid the foundations for stealth games and the Metal Gear series, his best known and most appreciated works. At Konami, he also produced the Zone of the Enders series, as well as wrote and designed Snatcher (1988) and Policenauts (1994), graphic adventure games regarded for their cinematic presentation.",
             "categories": [
                 {
@@ -140,6 +144,7 @@
             "likes": 100,
             "author": "Shinkai Makoto",
             "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "5 Centimeters per Second (Japanese: 秒速5センチメートル, Hepburn: Byōsoku Go Senchimētoru) is a 2007 Japanese romantic drama animated film written and directed by Makoto Shinkai. It theatrically premiered on 3 March 2007. The film consists of three segments, each following a period in the life of the protagonist Takaki Tōno and his relationships with the girls around him.",
             "categories": [
                 {
@@ -165,6 +170,7 @@
             "chapters": [],
             "author": "Vince Gilligan",
             "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "Breaking Bad is an American crime drama television series created and produced by Vince Gilligan for AMC. Set and filmed in Albuquerque, New Mexico, the series follows Walter White (Bryan Cranston), an underpaid, dispirited high-school chemistry teacher struggling with a recent diagnosis of stage-three lung cancer. White turns to a life of crime and partners with a former student, Jesse Pinkman (Aaron Paul), to produce and distribute methamphetamine to secure his family's financial future before he dies, while navigating the dangers of the criminal underworld. Breaking Bad premiered on AMC on January 20, 2008, and concluded on September 29, 2013, after five seasons consisting of 62 episodes.",
             "categories": [
                 {
@@ -184,6 +190,12 @@
                 },
                 {
                     "name": "Crime"
+                },
+                {
+                    "name": "Thriller"
+                },
+                {
+                    "name": "Mystery"
                 }
             ]
         },
@@ -199,6 +211,7 @@
             "likes": 100,
             "author": "Walter Wild",
             "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "Futbol Club Barcelona (Catalan pronunciation: [fubˈbɔl ˈklub bəɾsəˈlonə]), commonly referred to as Barcelona and colloquially known as Barça ([ˈbaɾsə]), is a professional football club based in Barcelona, Catalonia, Spain, that competes in La Liga, the top flight of Spanish football.",
             "categories": [
                 {
@@ -220,7 +233,8 @@
             "likes": 100,
             "chapters": [],
             "author": "Stan Lee",
-            "lastChapter": 149,
+            "lastChapter": 5,
+            "timeReleased": 24,
             "desc": "Spider-Man is a superhero appearing in American comic books published by Marvel Comics. Created by writer-editor Stan Lee and artist Steve Ditko, he first appeared in the anthology comic book Amazing Fantasy #15 (August 1962) in the Silver Age of Comic Books. He has been featured in comic books, television shows, films, video games, novels, and plays.",
             "categories": [
                 {
