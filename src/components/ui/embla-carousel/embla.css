@@ -20,8 +20,6 @@
         --slide-height: 8rem;
         --slide-spacing: 0.5rem;
     }
-
-    
 }
 
 @media screen and (min-width: 420px) and (max-width: 719px) {
@@ -65,7 +63,11 @@
 .embla__viewport {
     overflow: hidden;
 }
+.banner-embla-container{
+    margin-left: calc(var(--slide-spacing) * -1);
+    backface-visibility: hidden;
 
+}
 .embla__container {
     backface-visibility: hidden;
     display: flex;
