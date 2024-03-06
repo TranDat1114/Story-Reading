@@ -34,15 +34,15 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'yarn'
       - name: Install dependencies
-        run: npm install
+        run: yarn install
       - name: Build
-        run: npm run build # Adjust this command according to your Vite configuration, typically "vite build"
+        run: yarn build # Adjust this command according to your Vite configuration
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-artifact@v2 # Vite may generate build artifacts in a different directory, adjust path accordingly
+        uses: actions/upload-artifact@v2
         with:
           name: build
           path: './dist' # Adjust this path according to your Vite configuration
