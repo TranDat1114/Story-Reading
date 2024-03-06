@@ -6,7 +6,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
 // import { ArrowRight } from "lucide-react";
 // import { useRef } from "react";
-import BannerEmblaCarousel from "../ui/embla-carousel/banner-embla-carousel";
+// import BannerEmblaCarousel from "../ui/embla-carousel/banner-embla-carousel";
 const OPTIONS: EmblaOptionsType = { loop: true }
 
 const GenrePage = () => {
@@ -29,7 +29,7 @@ const GenrePage = () => {
                     Quảng cáo ở đây
                 </h1>
             </div>
-            <div className="divider"></div>
+            {/* <div className="divider"></div>
             <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock All-time" />
             <div className="divider"></div>
             <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock Tuần" />
@@ -79,7 +79,7 @@ const GenrePage = () => {
             <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện khoa học viễn tưởng" />
             <div className="divider"></div>
             <EmblaCarousel slides={databooks} options={OPTIONS} title="Truyện võ thuật" />
-            <div className="divider"></div>
+            <div className="divider"></div> */}
             <div className="pb-4">
                 <div className="w-full space-y-4">
                     <p className="font-semibold text-xl">Truyện chữ</p>
