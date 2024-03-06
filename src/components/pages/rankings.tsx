@@ -20,9 +20,9 @@ const RankingPage = () => {
                                 </td>
                                 <td className="w-full">
                                     <Link to={`/novels/${book.path}`} >
-                                        <p className="font-semibold flex flex-row cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out md:text-xl">{book.name}</p>
+                                        <p className="font-semibold flex flex-row cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out text-xl">{book.name}</p>
                                     </Link>
-                                    <p className="font-semibold flex flex-row cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out md:text-lg">{book.author}</p>
+                                    <p className="font-semibold flex flex-row cursor-pointer hover:text-orange-500 transition-all duration-300 ease-in-out text-lg">{book.author}</p>
                                     <div className="flex justify-start items-center flex-wrap">
                                         {book.categories.map((category, index) => (
                                             <div key={index} className="flex-row flex">
