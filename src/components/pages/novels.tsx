@@ -2,17 +2,28 @@ import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import booksData from '@/data/books.json';
 import { Book } from '@/types/home.ts';
-import { Glasses, NotebookText, ThumbsUp } from 'lucide-react';
+import { Flag, Glasses, MoreHorizontal, NotebookText, SendHorizonal, ThumbsUp } from 'lucide-react';
 // import userData from '@/data/user.json';
 import Ads from "@components/ui/banner/ads";
 import { useTranslation } from "react-i18next";
 import LoadingSpinner from '@components/pages/loading'
+import { Users } from '@/types/users';
+import User from '@/data/user.json';
 
 
 const NovelsPage = () => {
     const { t } = useTranslation("translation", {
         keyPrefix: "main.novels"
     });
+
+    const userdata: Users[] = User.users as Users[];
+
+    //* Reply Comment
+    const [isReplying, setIsReplying] = useState(false);
+    const handleReplyClick = () => {
+        setIsReplying(!isReplying);
+    };
+    //* Reply Comment
 
     // const [isUpNarrow, setIsUpNarrow] = useState(false);
 
@@ -217,7 +228,71 @@ const NovelsPage = () => {
                     <div className="bg-base-200 p-4 flex justify-evenly items-center h-40 my-4">
                         <Ads />
                     </div>
+                    <div>
+                        <div className="space-y-4">
+                            <h1 className="text-xl md:text-2xl font-bold">Bình luận</h1>
+                            <div className="border border-solid border-[#f1f2f3] rounded-lg p-4">
+                                <div className="flex items-center space-x-4">
+                                    <div className="avatar">
+                                        <div className="w-10 rounded-full">
+                                            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                        </div>
+                                    </div>
+                                    <div className="comments w-full">
+                                        <textarea className="textarea textarea-bordered w-full" placeholder="Nhập bình luận của bạn..."></textarea>
+                                    </div>
+                                    <div className="sendMessage">
+                                        <button className="btn btn-outline btn-success btn-circle">
+                                            <SendHorizonal size={18} />
+                                        </button>
+                                    </div>
+                                </div>
+                                {userdata.map((user, index) => (
+                                    <div className="chat chat-start space-y-2" key={index}>
+                                        <div className="chat-image avatar">
+                                            <div className="w-10 rounded-full">
+                                                <img alt={user.name + 'Cover'} src={user.avatar} />
+                                            </div>
+                                        </div>
+                                        <div className="chat-header space-x-2">
+                                            <span>{user.name}</span>
+                                            <time className="text-xs opacity-50">{user.dateComment}</time>
+                                        </div>
+                                        <div className="chat-bubble">{user.contentComment}</div>
+                                        <div className="chat-footer flex items-center">
+                                            <div className="flex items-center gap-4">
+                                                <div className="likes">
+                                                    <p className="cursor-pointer">Thích</p>
+                                                </div>
+                                                <div className="reply">
+                                                    <p className="cursor-pointer" onClick={handleReplyClick}>Trả lời</p>
+                                                    {/* {isReplying && (
+                                                        <div className="textarea-container">
+                                                            <textarea className="textarea textarea-bordered" placeholder="Nhập bình luận của bạn..."></textarea>
+                                                        </div>
+                                                    )} */}
+                                                </div>
+                                                <div className="dropdown dropdown-bottom">
+                                                    <button tabIndex={0} className="btn btn-ghost btn-circle btn-xs">
+                                                        <MoreHorizontal size={18} />
+                                                    </button>
+                                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                                        <li>
+                                                            <div className="flex items-center gap-4">
+                                                                <Flag size={12} className="align-middle block" />
+                                                                <p>Báo cáo</p>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
 
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
