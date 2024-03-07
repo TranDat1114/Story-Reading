@@ -1,13 +1,17 @@
 import BookData from "@/data/books.json"
 import { Book } from "@/types/home";
 
-import "@components/ui/embla-carousel/embla.css"
 import { EmblaOptionsType } from "embla-carousel";
+
+import "@components/ui/embla-carousel/embla.css"
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
+import EmblaCarouselGenere from "../ui/embla-carousel-genre/embla-caoursel-genre";
+
 // import { ArrowRight } from "lucide-react";
 // import { useRef } from "react";
 // import BannerEmblaCarousel from "../ui/embla-carousel/banner-embla-carousel";
 const OPTIONS: EmblaOptionsType = { loop: true }
+const optionsGenere: EmblaOptionsType = {loop: true, align: 'start', dragFree: true }
 
 const GenrePage = () => {
 
@@ -29,6 +33,21 @@ const GenrePage = () => {
                     Quảng cáo ở đây
                 </h1>
             </div>
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện lãng mạn" />
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện hành động" />
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện phiêu lưu" />
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện bí ẩn" />
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện kinh dị" />
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện hài hước" />
+            <div className="divider"></div>
+            <EmblaCarouselGenere slides={databooks} options={optionsGenere} title="Truyện lịch sử" />
+            <div className="divider"></div>
             {/* <div className="divider"></div>
             <EmblaCarousel slides={databooks} options={OPTIONS} title="Top 10 Unlock All-time" />
             <div className="divider"></div>
@@ -83,7 +102,7 @@ const GenrePage = () => {
             <div className="pb-4">
                 <div className="w-full space-y-4">
                     <p className="font-semibold text-xl">Truyện chữ</p>
-                    <p>Đọc truyện tranh hay nhất, đa dạng thể loại: truyện tranh ngôn tình, truyện tranh đam mỹ, truyện tranh cổ trang...</p>
+                    <p>Đọc truyện tranh hay nhất, đa dạng thể loại: truyện hành động, truyện kinh dị, truyện hài hước...</p>
                 </div>
             </div>
         </div>
