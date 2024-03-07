@@ -1,21 +1,19 @@
 // import { useParams } from "react-router-dom";
-// import bookData from "@/data/books.json";
+import bookData from "@/data/books.json";
+import { Book } from "@/types/home";
 // import { useEffect, useState } from "react";
 // import { Chapter } from "@/types/home";
 
-import { BookMarked, Heart } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookMarked, Bookmark, Heart, Menu, Minus, Plus } from "lucide-react";
 import { SetStateAction, useState } from "react";
 import { useParams } from "react-router-dom";
 
 
-interface ChapterParams {
-    novelName: string;
-    chapterNumber: string;
-}
+
 
 interface ChapterParams {
     novelName: string;
-    chapterNumber: string;
+    chapterName: string;
     [key: string]: string | undefined;
 }
 
@@ -105,7 +103,10 @@ interface OptionsReadPage {
 
 
 const NovelChapterPage = () => {
-    const { novelName, chapterNumber } = useParams<ChapterParams>();
+    const { novelName, chapterName } = useParams<ChapterParams>();
+
+    const book = bookData.books.find(book => book.path === novelName) as Book;
+    const bookChapter = book.chapters.find(chapter => chapter.title === chapterName);
 
     const [options, setOptions] = useState<OptionsReadPage>(
         {
@@ -197,215 +198,143 @@ const NovelChapterPage = () => {
     }
 
     return (
-        <div className="prose mx-auto">
-            <h1>Đang được phát triển</h1>
-            <h2>{novelName}</h2>
-            <div className="w-full py-6 mt-8 flex flex-col gap-8 " style={
+        <div className="flex justify-center relative gap-x-4 w-full p-8"
+            style={
                 {
-                    background: options.color.primaryColor + "B3"
+                    background: options.color.primaryColor + "B3",
+                  
+                }
+            }
+        >
+            <div className="flex flex-col gap-2 sticky top-20 h-full"
+
+            >
+                <div className="btn btn-square btn-md btn-outline "
+                    style={
+                        {
+                            color: options.color.textColor
+                        }
+                    }>
+                    <Heart size={24} className="fill-red-500" />
+                </div>
+                <div className="btn btn-square btn-md btn-outline"
+                    style={
+                        {
+                            color: options.color.textColor
+                        }
+                    }>
+                    <Bookmark size={24} className="fill-current" />
+                </div>
+            </div>
+            <div className="p-8 rounded-box" style={
+                {
+                    background: options.color.primaryColor
                 }
             }>
-                <div className="relative m-auto flex justify-center gap-4 w-full" style={
+                <div className="prose prose-lg text-primary-content"
+                style={
                     {
-                        maxWidth: options.width.size + 200
+                        maxWidth: options.width.size
                     }
                 }>
-                    <div className="sticky top-28 h-full hidden lg:flex flex-col gap-4">
-                        <button className="w-12 h-12 p-2">
-                            <Heart size={24} />
-                        </button>
-                        <button className="w-12 h-12 p-2">
-                            <BookMarked size={24} />
-                        </button>
-                    </div>
-
-                    {/* <Card className={`w-full py-6 border-0`}
+                    <p style={
+                        {
+                            fontSize: options.fontSize.size + "px",
+                            fontFamily: options.font,
+                            lineHeight: options.lineSpacing,
+                            color: options.color.textColor
+                        }
+                    }>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius ut perspiciatis corrupti ratione, illo adipisci eligendi commodi atque quisquam aspernatur exercitationem dolorem distinctio tenetur eaque aut voluptates amet! Repudiandae assumenda, necessitatibus sapiente consequatur maiores architecto ratione similique tempore perferendis, in nesciunt cupiditate harum dolorum totam reprehenderit quia magnam molestias. Consectetur repellendus excepturi totam quo culpa rem laudantium corporis aut accusamus praesentium. Quae non magni harum, repudiandae aspernatur eveniet. Nobis, ipsa iste aut voluptatem quidem aliquid, provident modi animi mollitia exercitationem molestias. Impedit sit, ipsum cupiditate magnam alias provident maiores sequi deleniti quod molestias! Neque minima molestias quos dolorem? A, placeat rerum minus praesentium deleniti nostrum. Nam illum cupiditate reiciendis voluptatum ipsam consequatur iure quibusdam deserunt et aspernatur nemo culpa voluptatibus itaque facere in eligendi dolorum ab similique, nostrum amet nulla, explicabo porro commodi repudiandae? Corrupti quis quae incidunt minima rerum corporis, exercitationem modi ad quos distinctio dolorem velit hic in omnis a fugit quasi illo qui explicabo, ducimus commodi quam? Placeat assumenda optio veniam beatae blanditiis eaque deleniti, repudiandae voluptatum libero. Tempore perferendis possimus, est praesentium dolor tenetur quis reprehenderit nemo accusamus distinctio expedita dolore commodi minus soluta quam consequuntur non, similique rerum animi repudiandae ea fugiat consectetur obcaecati.
+                    </p>
+                </div>
+            </div>
+            <div className="dropdown sticky top-20 h-full">
+                <div tabIndex={0} role="button" className="btn btn-circle btn-outline"
+                    style={
+                        {
+                            color: options.color.textColor
+                        }
+                    }>
+                    <Menu size={24} />
+                </div>
+                <div tabIndex={0} className="dropdown-content z-[1] card card-compact w-64 p-2 \ text-primary-content shadow-lg"
+                    style={
+                        {
+                            background: options.color.primaryColor
+                        }
+                    }
+                >
+                    <div className="card-body"
                         style={
                             {
-                                background: options.color.primaryColor,
-                                maxWidth: options.width.size
+                                color: options.color.textColor
                             }
                         }>
-                        <CardContent className={`flex flex-col gap-4`}>
-                            <div className="flex justify-between items-center">
-
-                                <button className="flex gap-2">
-                                    <ArrowLeft className="w-4 h-4 align-middle block" />
-                                    <p className="text-sm">Chương trước</p>
-                                </button>
-
-
-                                <button className="flex gap-2">
-                                    <p className="text-sm">Chương sau</p>
-                                    <ArrowRight className="w-4 h-4 align-middle block" />
-                                </button>
-                            </div>
-
-                            <div className="my-8">
-                                <p className={`text-3xl font-semibold my-4`} style={
-                                    {
-                                        color: options.color.textColor
-                                    }
-                                }>
-                                    {book.Title}
-                                </p>
-                                <div className="flex flex-col md:flex-row justify-start md:items-end gap-8 w-full" style={
-                                    {
-                                        color: options.color.textColor
-                                    }}>
-                                    <div className="flex flex-row justify-start gap-2 items-center">
-                                        <span className="text-sm">Tác giả: </span>
-                                        <span className="text-sm">{book.Author}</span>
-                                    </div>
-                                    <div className="flex flex-row justify-start gap-2 items-center">
-                                        <span className="text-sm">Ngày đăng: </span>
-                                        <span className="text-sm">{book.Date}</span>
-                                    </div>
-                                    <div className="flex flex-row justify-start gap-2 items-center">
-                                        <span className="text-sm">Trạng thái: </span>
-                                        <span className="text-sm">{book.Status}</span>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div style={
+                        <h3 className="card-title">Cài đặt hiển thị</h3>
+                        <p>Chọn nhanh</p>
+                        <div>
+                            <span>Màu</span>
+                            <div className="flex flex-wrap justify-between w-full gap-4">
                                 {
-                                    fontSize: options.fontSize.size + "px",
-                                    fontFamily: options.font,
-                                    lineHeight: options.lineSpacing,
-                                    color: options.color.textColor
-                                }
-                            }>
-                                {book.ChapterContent.map((content, index) => (
-                                    <div key={index}>
-                                        <p >{content}</p>
-                                        <br />
-                                    </div>
-                                ))}
-                            </div>
-                        </CardContent>
-                        <CardFooter className="flex justify-center gap-4 w-full lg:justify-end">
-                            <div className="flex justify-between gap-4 items-center">
+                                    colors.map((color, index) => (
+                                        <button key={index} onClick={() => changeColor(color.primaryColor, color.textColor)} className={`w-8 h-8  rounded-sm border shadow-sm`}
+                                            style={
+                                                {
+                                                    background: color.primaryColor
+                                                }
 
-                                <button className="flex gap-2">
-                                    <ArrowLeft className="w-4 h-4 align-middle block" />
-                                    <p className="text-sm">Chương trước</p>
-                                </button>
-
-
-                                <button className="flex gap-2">
-                                    <p className="text-sm">Chương sau</p>
-                                    <ArrowRight className="w-4 h-4 align-middle block" />
-                                </button>
-                            </div>
-                        </CardFooter>
-                    </Card> */}
-
-                    {/* change color button */}
-                    <div className="sticky top-28 z-10 hidden lg:block h-full">
-                        {/* <DropdownMenu>
-                            <DropdownMenuTrigger asChild>
-                                <button className="w-12 h-12 p-2 rounded-full" >
-                                    <AlignJustify size={24} />
-                                </button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-64 p-4">
-                                <DropdownMenuLabel>Cài đặt hiển thị</DropdownMenuLabel>
-                                <DropdownMenuLabel>Chọn nhanh</DropdownMenuLabel>
-                                <DropdownMenuLabel className="bg-background flex flex-col gap-4">
-                                    <div>
-                                        <span>Màu</span>
-                                        <div className="flex flex-wrap justify-between w-full gap-4">
-                                            {
-                                                colors.map((color, index) => (
-                                                    <button key={index} onClick={() => changeColor(color.primaryColor, color.textColor)} className={`w-8 h-8 bg-[${color.primaryColor}] rounded-sm border shadow-sm`}>
-                                                    </button>
-                                                ))
                                             }
-                                        </div>
-                                    </div>
-                                
-                                    <div>
-                                        <span>Giãn dòng</span>
-                                        <div className="flex justify-between w-full gap-4 items-center">
-                                            <button onClick={() => minusLineSpacing()} className="w-8 h-8 p-2">
-                                                <Minus />
+                                        >
+                                        </button>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                        <div>
+                            <span>Giãn dòng</span>
+                            <div className="flex justify-between w-full gap-4 items-center">
+                                <button onClick={() => minusLineSpacing()} className="w-8 h-8 p-2">
+                                    <Minus />
 
-                                            </button>
-                                            <span className="text-sm">{options.lineSpacing * 100}%</span>
-                                            <button onClick={() => plusLineSpacing()} className="w-8 h-8 p-2">
-                                                <Plus />
-                                            </button>
-                                        </div>
-                                    </div>
+                                </button>
+                                <span className="text-sm">{options.lineSpacing * 100}%</span>
+                                <button onClick={() => plusLineSpacing()} className="w-8 h-8 p-2">
+                                    <Plus />
+                                </button>
+                            </div>
+                        </div>
 
-                                    <div>
-                                        <span>Chiều rộng</span>
-                                        <div className="flex justify-between w-full gap-4 items-center">
-                                            <button onClick={() => minusWidth()} className="w-8 h-8 p-2">
-                                                <Minus />
-                                            </button>
-                                            <span className="text-sm">{options.width.size}</span>
-                                            <button onClick={() => plusWidth()} className="w-8 h-8 p-2">
-                                                <Plus />
-                                            </button>
-                                        </div>
-                                    </div>
-
-
-                                    <div>
-                                        <span>Cỡ chữ</span>
-                                        <div className="flex justify-between w-full gap-4 items-center">
-                                            <button onClick={() => minusFontSize()} className="w-8 h-8 p-2">
-                                                <Minus />
-                                            </button>
-                                            <span className="text-sm">{options.fontSize.size}</span>
-                                            <button onClick={() => plusFontSize()} className="w-8 h-8 p-2">
-                                                <Plus />
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span>Kiểu chữ</span>
-
-                                        <Select onValueChange={(value) => changeFont(value)}>
-                                            <SelectTrigger className="w-full">
-                                                <SelectValue placeholder="Chọn font chữ" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectGroup>
-                                                    {
-                                                        fontFamilies.map((font, index) => (
-                                                            <SelectItem key={index} value={font}>{font}</SelectItem>
-                                                        ))
-                                                    }
-                                                </SelectGroup>
-                                            </SelectContent>
-                                        </Select>
-
-                                    </div>
-                                </DropdownMenuLabel>
-                                <DropdownMenuSeparator />
-
-                            </DropdownMenuContent>
-                        </DropdownMenu> */}
-
-                        {/* <button variant={"ghost"} onClick={() => changeColor("#cbe1cb", "#000000")} className="bg-[#cbe1cb]">
-                    Change color
-                </button>
-                <button variant={"ghost"} onClick={() => changeColor("#ebcaca", "#000000")} className="bg-[#ebcaca]">
-                    Change color
-                </button> */}
+                        <div>
+                            <span>Chiều rộng</span>
+                            <div className="flex justify-between w-full gap-4 items-center">
+                                <button onClick={() => minusWidth()} className="w-8 h-8 p-2">
+                                    <Minus />
+                                </button>
+                                <span className="text-sm">{options.width.size}</span>
+                                <button onClick={() => plusWidth()} className="w-8 h-8 p-2">
+                                    <Plus />
+                                </button>
+                            </div>
+                        </div>
 
 
+                        <div>
+                            <span>Cỡ chữ</span>
+                            <div className="flex justify-between w-full gap-4 items-center">
+                                <button onClick={() => minusFontSize()} className="w-8 h-8 p-2">
+                                    <Minus />
+                                </button>
+                                <span className="text-sm">{options.fontSize.size}</span>
+                                <button onClick={() => plusFontSize()} className="w-8 h-8 p-2">
+                                    <Plus />
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="container">
-
-                </div>
-            </div >
-        </div>
+            </div>
+        </div >
     );
 }
 export default NovelChapterPage;

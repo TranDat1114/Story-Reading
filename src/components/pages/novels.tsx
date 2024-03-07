@@ -70,7 +70,7 @@ const NovelsPage = () => {
                         <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
 
                         <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
-                            <img src={bookDetails.img} className="shadow-2xl max-w-sm rounded-lg bg-transparent object-cover max-h-96" alt={bookDetails.name + 'Cover'} />
+                            <img src={bookDetails.img} className="shadow-2xl  w-[265px] rounded-lg bg-transparent object-cover h-96" alt={bookDetails.name + 'Cover'} />
 
                             <div className="lg:w-1/2 flex flex-col gap-12 justify-stretch min-h-96">
                                 <div className="prose my-4 ">
@@ -168,7 +168,7 @@ const NovelsPage = () => {
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full not-prose">
                                 {
                                     booksData.books.slice(0, 4).map((book, index) => (
-                                        <div key={index} className="flex items-center justify-center flex-col w-full">
+                                        <Link to={`/novels/${book.path}`} key={index} className="flex items-center justify-center flex-col w-full">
                                             <div className="img">
                                                 <img src={book.img} alt={book.name + 'Cover'} className='rounded-md w-28 h-40 object-cover cursor-pointer' />
                                             </div>
@@ -186,7 +186,7 @@ const NovelsPage = () => {
                                                     ))
                                                 }
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))
                                 }
                             </div>

@@ -11,6 +11,7 @@ import FullBooksUpdate from "../ui/booksUpdate/fullBooksUpdate";
 import BannerEmblaCarousel from "../ui/embla-carousel/banner-embla-carousel";
 
 const OPTIONS: EmblaOptionsType = { loop: true }
+const OPTIONSBanner: EmblaOptionsType = { loop: true, duration: 100}
 
 const HomePage = () => {
     const databooks: Book[] = BookData.books as Book[];
@@ -35,7 +36,7 @@ const HomePage = () => {
                 </div>
             </div> */}
 
-            <BannerEmblaCarousel slides={databooks} options={OPTIONS} title="Truyện đề cử" />
+            <BannerEmblaCarousel slides={databooks} options={OPTIONSBanner} title="Truyện đề cử" />
 
             <div className="divider" >
 
