@@ -1,4 +1,3 @@
-import React from 'react';
 import Lottie from 'react-lottie';
 import animationData from '../ui/lotties/404-animation-2.json';
 
