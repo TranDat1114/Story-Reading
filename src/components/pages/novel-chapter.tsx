@@ -4,8 +4,8 @@ import { Book } from "@/types/home";
 // import { useEffect, useState } from "react";
 // import { Chapter } from "@/types/home";
 
-import { ArrowLeft, ArrowRight, Bookmark, Heart, Menu, Minus, Plus } from "lucide-react";
-import {  useState } from "react";
+import { ArrowLeft, ArrowRight, Bookmark, Heart, Minus, MoveLeft, MoveRight, Plus, SlidersHorizontal } from "lucide-react";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 
@@ -198,210 +198,396 @@ const NovelChapterPage = () => {
         });
     }
 
+
+
     return (
-        <div className="flex justify-center relative gap-x-4 md:p-8"
-            style={
-                {
-                    background: options.color.primaryColor + "B3",
-                }
+        <div className="md:p-8 w-full" style={
+            {
+                background: options.color.primaryColor + "B3",
             }
-        >
-            <div className="flex-col gap-2 sticky top-20 h-full hidden md:flex"
+        }>
+            <div className="w-full flex justify-between gap-x-2  container mx-auto p-2">
+                {
+                    bookChapter?.prevChapter ? (
+                        <Link to={`/novels/${book.path}/${bookChapter?.prevChapter}`} className="btn btn-active btn-sm"
+                        >
+                            <MoveLeft size={24} className="fill-current" />
+                            Chương trước
+                        </Link>
+                    ) :
+                        <div className="btn btn-sm btn-disabled"
+                            style={
+                                {
+                                    color: options.color.textColor
+                                }
+                            }>
+                            <ArrowLeft size={24} className="fill-current" />
+                            Chương trước
+                        </div>
+                }
+
+                <h1 className="text-2xl text-center font-bold hidden md:block"
+                    style={
+                        {
+                            color: options.color.textColor
+                        }
+                    }
+                >{bookChapter?.title}</h1>
+                {
+                    bookChapter?.nextChapter ? (
+                        <Link to={`/novels/${book.path}/${bookChapter?.nextChapter}`} className="btn btn-active btn-sm"
+                        >
+                            Chương sau
+                            <MoveRight size={24} className="fill-current" />
+                        </Link>
+                    ) :
+                        <div className="btn btn-sm btn-disabled"
+                            style={
+                                {
+                                    color: options.color.textColor
+                                }
+                            }>
+                            Chương sau
+                            <ArrowRight size={24} className="fill-current" />
+                        </div>
+                }
+
+            </div>
+            <h1 className="text-2xl text-center font-bold md:hidden"
+                style={
+                    {
+                        color: options.color.textColor
+                    }
+                }
+            >{bookChapter?.title}</h1>
+            <div className="flex justify-center relative gap-x-4 mt-4"
 
             >
-                <div className="btn btn-square btn-md btn-outline "
-                    style={
-                        {
-                            color: options.color.textColor
-                        }
-                    }>
-                    <Heart size={24} className="fill-red-500" />
-                </div>
-                <div className="btn btn-square btn-md btn-outline"
-                    style={
-                        {
-                            color: options.color.textColor
-                        }
-                    }>
-                    <Bookmark size={24} className="fill-current" />
-                </div>
-            </div>
-            <div className="md:p-8 p-4 rounded-box flex flex-col gap-4" style={
-                {
-                    background: options.color.primaryColor
-                }
-            }>
-                <div className="w-full flex justify-between gap-x-2">
-                    {
-                        bookChapter?.prevChapter ? (
-                            <Link to={`/novels/${book.path}/${bookChapter?.prevChapter}`} className="btn btn-outline btn-square btn-sm"
-                                style={
-                                    {
-                                        color: options.color.textColor
-                                    }
-                                }>
-                                <ArrowLeft size={24} className="fill-current" />
-                            </Link>
-                        ) :
-                            <div className="btn btn-square btn-sm btn-disabled"
-                                style={
-                                    {
-                                        color: options.color.textColor
-                                    }
-                                }>
-                                <ArrowLeft size={24} className="fill-current" />
-                            </div>
-                    }
-
-                    <h1 className="text-2xl font-bold"
-                        style={
-                            {
-                                color: options.color.textColor
-                            }
-                        }
-                    >{bookChapter?.title}</h1>
-                    {
-                        bookChapter?.nextChapter ? (
-                            <Link to={`/novels/${book.path}/${bookChapter?.nextChapter}`} className="btn btn-outline btn-square btn-sm"
-                                style={
-                                    {
-                                        color: options.color.textColor
-                                    }
-                                }>
-                                <ArrowRight size={24} className="fill-current" />
-                            </Link>
-                        ) :
-                            <div className="btn btn-square btn-sm btn-disabled"
-                                style={
-                                    {
-                                        color: options.color.textColor
-                                    }
-                                }>
-                                <ArrowRight size={24} className="fill-current" />
-                            </div>
-                    }
-
-                </div>
-                <div className="prose prose-lg text-primary-content"
-                    style={
-                        {
-                            maxWidth: options.width.size,
-                            fontSize: options.fontSize.size + "px",
-                            fontFamily: options.font,
-                            lineHeight: options.lineSpacing,
-                            color: options.color.textColor
-                        }
-                    }>
-
-                    {
-                        bookChapter?.content.split('.').map((content, index) => (
-                            <p key={index}>{content}</p>
-                        ))
-                    }
-                </div>
-            </div>
-            <div className="dropdown sticky top-20 h-full hidden md:flex">
-                <div tabIndex={0} role="button" className="btn btn-circle btn-outline"
-                    style={
-                        {
-                            color: options.color.textColor
-                        }
-                    }>
-                    <Menu size={24} />
-                </div>
-                <div tabIndex={0} className="dropdown-content z-[1] card card-compact w-64 p-2 \ text-primary-content shadow-lg"
-                    style={
-                        {
-                            background: options.color.primaryColor
-                        }
-                    }
-                >
-                    <div className="card-body"
+                <div className="flex-col gap-2 sticky top-20 h-full hidden lg:flex"            >
+                    <div className="btn btn-square btn-md btn-outline "
                         style={
                             {
                                 color: options.color.textColor
                             }
                         }>
-                        <h3 className="card-title">Cài đặt hiển thị</h3>
-                        <p>Chọn nhanh</p>
-                        <div>
-                            <span>Màu</span>
-                            <div className="flex flex-wrap justify-between w-full gap-4">
+                        <Heart size={24} className="fill-red-500" />
+                    </div>
+                    <div className="btn btn-square btn-md btn-outline"
+                        style={
+                            {
+                                color: options.color.textColor
+                            }
+                        }>
+                        <Bookmark size={24} className="fill-current" />
+                    </div>
+                </div>
+                <div className="md:p-8 p-4 rounded-box flex flex-col gap-4" style={
+                    {
+                        background: options.color.primaryColor
+                    }
+                }>
+
+                    <div className="prose prose-lg text-primary-content"
+                        style={
+                            {
+                                maxWidth: options.width.size,
+                                fontSize: options.fontSize.size + "px",
+                                fontFamily: options.font,
+                                lineHeight: options.lineSpacing,
+                                color: options.color.textColor
+                            }
+                        }>
+
+                        {
+                            bookChapter?.content.split('.').map((content, index) => (
+                                <p key={index}>{content}</p>
+                            ))
+                        }
+                    </div>
+                    <div className="w-full flex justify-between gap-x-2">
+                        {
+                            bookChapter?.prevChapter ? (
+                                <Link to={`/novels/${book.path}/${bookChapter?.prevChapter}`} className="btn btn-active btn-sm"
+                                >
+                                    <MoveLeft size={24} className="fill-current" />
+                                    Chuơng trước
+                                </Link>
+                            ) :
+                                <div className="btn btn-square btn-sm btn-disabled"
+                                    style={
+                                        {
+                                            color: options.color.textColor
+                                        }
+                                    }>
+                                    <ArrowLeft size={24} className="fill-current" />
+                                </div>
+                        }
+
+                        {
+                            bookChapter?.nextChapter ? (
+                                <Link to={`/novels/${book.path}/${bookChapter?.nextChapter}`} className="btn btn-active btn-sm"
+                                >
+                                    Chương sau
+                                    <MoveRight size={24} className="fill-current" />
+                                </Link>
+                            ) :
+                                <div className="btn btn-square btn-sm btn-disabled"
+                                    style={
+                                        {
+                                            color: options.color.textColor
+                                        }
+                                    }>
+                                    <ArrowRight size={24} className="fill-current" />
+                                </div>
+                        }
+
+                    </div>
+                </div>
+                <div className="dropdown dropdown-end sticky top-20 h-full hidden lg:flex">
+                    <div tabIndex={0} role="button" className="btn btn-circle btn-outline"
+                        style={
+                            {
+                                color: options.color.textColor
+                            }
+                        }>
+                        <SlidersHorizontal size={24} />
+                    </div>
+                    <div tabIndex={0} className="dropdown-content z-[1] card card-compact w-64 p-2 text-primary-content shadow-lg  drop-shadow-lg"
+                        style={
+                            {
+                                background: options.color.primaryColor
+                            }
+                        }
+                    >
+                        <div className="card-body"
+                            style={
                                 {
-                                    colors.map((color, index) => (
-                                        <button key={index} onClick={() => changeColor(color.primaryColor, color.textColor)} className={`w-8 h-8  rounded-sm border shadow-sm`}
-                                            style={
-                                                {
-                                                    background: color.primaryColor
-                                                }
-
-                                            }
-                                        >
-                                        </button>
-                                    ))
+                                    color: options.color.textColor
                                 }
-                            </div>
-                        </div>
-                        <div>
-                            <span>Giãn dòng</span>
-                            <div className="flex justify-between w-full gap-4 items-center">
-                                <button onClick={() => minusLineSpacing()} className="w-8 h-8 p-2">
-                                    <Minus />
-
-                                </button>
-                                <span className="text-sm">{options.lineSpacing * 100}%</span>
-                                <button onClick={() => plusLineSpacing()} className="w-8 h-8 p-2">
-                                    <Plus />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span>Chiều rộng</span>
-                            <div className="flex justify-between w-full gap-4 items-center">
-                                <button onClick={() => minusWidth()} className="w-8 h-8 p-2">
-                                    <Minus />
-                                </button>
-                                <span className="text-sm">{options.width.size}</span>
-                                <button onClick={() => plusWidth()} className="w-8 h-8 p-2">
-                                    <Plus />
-                                </button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <span>Cỡ chữ</span>
-                            <div className="flex justify-between w-full gap-4 items-center">
-                                <button onClick={() => minusFontSize()} className="w-8 h-8 p-2">
-                                    <Minus />
-                                </button>
-                                <span className="text-sm">{options.fontSize.size}</span>
-                                <button onClick={() => plusFontSize()} className="w-8 h-8 p-2">
-                                    <Plus />
-                                </button>
-                            </div>
-                        </div>
-                        <label className="form-control w-full max-w-xs">
-                            <div className="label">
-                                <span className="label-text"
+                            }>
+                            <h3 className="card-title">Cài đặt hiển thị</h3>
+                            <p>Chọn nhanh</p>
+                            <label className="form-control w-full max-w-xs">
+                                <div className="label">
+                                    <span className="label-text"
+                                        style={{
+                                            color: options.color.textColor
+                                        }}
+                                    >Chọn kiểu chữ</span>
+                                </div>
+                                <select className="select select-bordered" onChange={(e) => changeFont(e.target.value)}
                                     style={{
-                                        color: options.color.textColor
+                                        background: options.color.primaryColor,
                                     }}
-                                >Chọn kiểu chữ</span>
-                            </div>
-                            <select className="select select-bordered" onChange={(e) => changeFont(e.target.value)}
-                                style={{
-                                    background: options.color.primaryColor,
-                                }}
-                            >
-                                {
-                                    fontFamilies.map((font, index) => (
-                                        <option key={index} value={font}>{font}</option>
-                                    ))
-                                }
-                            </select>
+                                >
+                                    {
+                                        fontFamilies.map((font, index) => (
+                                            <option key={index} value={font}>{font}</option>
+                                        ))
+                                    }
+                                </select>
 
-                        </label>
+                            </label>
+                            <div>
+                                <span>Màu</span>
+                                <div className="flex flex-wrap justify-between w-full gap-4">
+                                    {
+                                        colors.map((color, index) => (
+                                            <button key={index} onClick={() => changeColor(color.primaryColor, color.textColor)} className={`w-8 h-8  rounded-sm border shadow-sm`}
+                                                style={
+                                                    {
+                                                        background: color.primaryColor
+                                                    }
+
+                                                }
+                                            >
+                                            </button>
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                            <div>
+                                <span>Giãn dòng</span>
+                                <div className="flex justify-between w-full gap-4 items-center">
+                                    <button onClick={() => minusLineSpacing()} className="w-8 h-8 p-2">
+                                        <Minus />
+
+                                    </button>
+                                    <span className="text-sm">{options.lineSpacing * 100}%</span>
+                                    <button onClick={() => plusLineSpacing()} className="w-8 h-8 p-2">
+                                        <Plus />
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span>Chiều rộng</span>
+                                <div className="flex justify-between w-full gap-4 items-center">
+                                    <button onClick={() => minusWidth()} className="w-8 h-8 p-2">
+                                        <Minus />
+                                    </button>
+                                    <span className="text-sm">{options.width.size}</span>
+                                    <button onClick={() => plusWidth()} className="w-8 h-8 p-2">
+                                        <Plus />
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span>Cỡ chữ</span>
+                                <div className="flex justify-between w-full gap-4 items-center">
+                                    <button onClick={() => minusFontSize()} className="w-8 h-8 p-2">
+                                        <Minus />
+                                    </button>
+                                    <span className="text-sm">{options.fontSize.size}</span>
+                                    <button onClick={() => plusFontSize()} className="w-8 h-8 p-2">
+                                        <Plus />
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div className="btm-nav lg:hidden">
+                    <button className="">
+                        {
+                            bookChapter?.prevChapter ? (
+
+                                <Link to={`/novels/${book.path}/${bookChapter?.prevChapter}`} className="text-info"
+                                >
+                                    <MoveLeft size={24} className="fill-current" />
+                                </Link>
+                            ) :
+                                <div className=""
+                                >
+                                    <ArrowLeft size={24} className="fill-current" />
+                                </div>
+                        }
+                    </button>
+
+                    <button className="">
+
+                        {
+                            bookChapter?.nextChapter ? (
+                                <Link to={`/novels/${book.path}/${bookChapter?.nextChapter}`} className="text-info"
+                                >
+                                    <MoveRight size={24} className="fill-current" />
+                                </Link>
+                            ) :
+                                <div className=" "                               >
+                                    <ArrowRight size={24} className="fill-current" />
+                                </div>
+                        }
+                    </button>
+
+                    <button className="">
+                        <Heart size={24} className="fill-red-500" />
+                    </button>
+                    <button className="">
+                        <Bookmark size={24} className="fill-current" />
+                    </button>
+                    <div className="dropdown dropdown-end sticky dropdown-top top-20 h-full">
+                        <div tabIndex={0} role="button" className="btn  mt-2"
+                        >
+                            <SlidersHorizontal size={24} />
+                        </div>
+                        <div tabIndex={0} className="dropdown-content z-[1] card card-compact w-64 p-2 text-primary-content shadow-lg drop-shadow-lg"
+                            style={
+                                {
+                                    background: options.color.primaryColor
+                                }
+                            }
+                        >
+                            <div className="card-body"
+                                style={
+                                    {
+                                        color: options.color.textColor
+                                    }
+                                }>
+                                <h3 className="card-title">Cài đặt hiển thị</h3>
+                                <p>Chọn nhanh</p>
+                                <label className="form-control w-full max-w-xs">
+                                    <div className="label">
+                                        <span className="label-text"
+                                            style={{
+                                                color: options.color.textColor
+                                            }}
+                                        >Chọn kiểu chữ</span>
+                                    </div>
+                                    <select className="select select-bordered" onChange={(e) => changeFont(e.target.value)}
+                                        style={{
+                                            background: options.color.primaryColor,
+                                        }}
+                                    >
+                                        {
+                                            fontFamilies.map((font, index) => (
+                                                <option key={index} value={font}>{font}</option>
+                                            ))
+                                        }
+                                    </select>
+
+                                </label>
+                                <div>
+                                    <span>Màu</span>
+                                    <div className="flex flex-wrap justify-between w-full gap-4">
+                                        {
+                                            colors.map((color, index) => (
+                                                <button key={index} onClick={() => changeColor(color.primaryColor, color.textColor)} className={`w-8 h-8  rounded-sm border shadow-sm`}
+                                                    style={
+                                                        {
+                                                            background: color.primaryColor
+                                                        }
+
+                                                    }
+                                                >
+                                                </button>
+                                            ))
+                                        }
+                                    </div>
+                                </div>
+                                <div>
+                                    <span>Giãn dòng</span>
+                                    <div className="flex justify-between w-full gap-4 items-center">
+                                        <button onClick={() => minusLineSpacing()} className="w-8 h-8 p-2">
+                                            <Minus />
+
+                                        </button>
+                                        <span className="text-sm">{options.lineSpacing * 100}%</span>
+                                        <button onClick={() => plusLineSpacing()} className="w-8 h-8 p-2">
+                                            <Plus />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span>Chiều rộng</span>
+                                    <div className="flex justify-between w-full gap-4 items-center">
+                                        <button onClick={() => minusWidth()} className="w-8 h-8 p-2">
+                                            <Minus />
+                                        </button>
+                                        <span className="text-sm">{options.width.size}</span>
+                                        <button onClick={() => plusWidth()} className="w-8 h-8 p-2">
+                                            <Plus />
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <span>Cỡ chữ</span>
+                                    <div className="flex justify-between w-full gap-4 items-center">
+                                        <button onClick={() => minusFontSize()} className="w-8 h-8 p-2">
+                                            <Minus />
+                                        </button>
+                                        <span className="text-sm">{options.fontSize.size}</span>
+                                        <button onClick={() => plusFontSize()} className="w-8 h-8 p-2">
+                                            <Plus />
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

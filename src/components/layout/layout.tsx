@@ -16,13 +16,11 @@ const Layout = ({ children }: LayoutProps) => {
     ScrollToTop()
     return (
         <div className="w-full relative space-y-2">
-            <Header />
-
             {
                 isNovelChapter ?
                     (
                         <main className="mx-auto min-h-svh space-y-2">
-                            <div className="mt-20 w-full">
+                            <div className="container mx-auto">
                                 <Breadcrumbs />
                             </div>
                             {children}
@@ -30,12 +28,15 @@ const Layout = ({ children }: LayoutProps) => {
                     )
                     :
                     (
-                        <main className="container mx-auto min-h-svh space-y-2">
-                            <div className="mt-20 w-full">
-                                <Breadcrumbs />
-                            </div>
-                            {children}
-                        </main>
+                        <>
+                            <Header />
+                            <main className="container mx-auto min-h-svh space-y-2">
+                                <div className="mt-20 w-full">
+                                    <Breadcrumbs />
+                                </div>
+                                {children}
+                            </main>
+                        </>
                     )
             }
 
