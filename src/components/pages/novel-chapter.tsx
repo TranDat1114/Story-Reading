@@ -4,9 +4,9 @@ import { Book } from "@/types/home";
 // import { useEffect, useState } from "react";
 // import { Chapter } from "@/types/home";
 
-import { ArrowLeft, ArrowRight, BookMarked, Bookmark, Heart, Menu, Minus, Plus } from "lucide-react";
-import { SetStateAction, useState } from "react";
-import { useParams } from "react-router-dom";
+import { ArrowLeft, ArrowRight, Bookmark, Heart, Menu, Minus, Plus } from "lucide-react";
+import {  useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 
 
@@ -103,21 +103,22 @@ interface OptionsReadPage {
 
 
 const NovelChapterPage = () => {
-    const { novelName, chapterName } = useParams<ChapterParams>();
+    const { novelName, chapterNumber } = useParams<ChapterParams>();
 
     const book = bookData.books.find(book => book.path === novelName) as Book;
-    const bookChapter = book.chapters.find(chapter => chapter.title === chapterName);
+
+    const bookChapter = book.chapters.find(chapter => chapter.path === chapterNumber);
 
     const [options, setOptions] = useState<OptionsReadPage>(
         {
-            fontSize: textFonts[2], font: fontFamilies[0], color: colors[3], lineSpacing: 1.5, width: widths[2]
+            fontSize: textFonts[0], font: fontFamilies[0], color: colors[3], lineSpacing: 1.5, width: widths[2]
         }
     )
 
-    const [comment, setComment] = useState<string>("");
-    function handleChangeComment(event: { target: { value: SetStateAction<string>; }; }) {
-        setComment(event.target.value);
-    }
+    // const [comment, setComment] = useState<string>("");
+    // function handleChangeComment(event: { target: { value: SetStateAction<string>; }; }) {
+    //     setComment(event.target.value);
+    // }
 
     // const book = bookData.ChapterInfor as ChapterInfor;
 
@@ -198,15 +199,14 @@ const NovelChapterPage = () => {
     }
 
     return (
-        <div className="flex justify-center relative gap-x-4 w-full p-8"
+        <div className="flex justify-center relative gap-x-4 md:p-8"
             style={
                 {
                     background: options.color.primaryColor + "B3",
-                  
                 }
             }
         >
-            <div className="flex flex-col gap-2 sticky top-20 h-full"
+            <div className="flex-col gap-2 sticky top-20 h-full hidden md:flex"
 
             >
                 <div className="btn btn-square btn-md btn-outline "
@@ -226,30 +226,81 @@ const NovelChapterPage = () => {
                     <Bookmark size={24} className="fill-current" />
                 </div>
             </div>
-            <div className="p-8 rounded-box" style={
+            <div className="md:p-8 p-4 rounded-box flex flex-col gap-4" style={
                 {
                     background: options.color.primaryColor
                 }
             }>
-                <div className="prose prose-lg text-primary-content"
-                style={
+                <div className="w-full flex justify-between gap-x-2">
                     {
-                        maxWidth: options.width.size
+                        bookChapter?.prevChapter ? (
+                            <Link to={`/novels/${book.path}/${bookChapter?.prevChapter}`} className="btn btn-outline btn-square btn-sm"
+                                style={
+                                    {
+                                        color: options.color.textColor
+                                    }
+                                }>
+                                <ArrowLeft size={24} className="fill-current" />
+                            </Link>
+                        ) :
+                            <div className="btn btn-square btn-sm btn-disabled"
+                                style={
+                                    {
+                                        color: options.color.textColor
+                                    }
+                                }>
+                                <ArrowLeft size={24} className="fill-current" />
+                            </div>
                     }
-                }>
-                    <p style={
+
+                    <h1 className="text-2xl font-bold"
+                        style={
+                            {
+                                color: options.color.textColor
+                            }
+                        }
+                    >{bookChapter?.title}</h1>
+                    {
+                        bookChapter?.nextChapter ? (
+                            <Link to={`/novels/${book.path}/${bookChapter?.nextChapter}`} className="btn btn-outline btn-square btn-sm"
+                                style={
+                                    {
+                                        color: options.color.textColor
+                                    }
+                                }>
+                                <ArrowRight size={24} className="fill-current" />
+                            </Link>
+                        ) :
+                            <div className="btn btn-square btn-sm btn-disabled"
+                                style={
+                                    {
+                                        color: options.color.textColor
+                                    }
+                                }>
+                                <ArrowRight size={24} className="fill-current" />
+                            </div>
+                    }
+
+                </div>
+                <div className="prose prose-lg text-primary-content"
+                    style={
                         {
+                            maxWidth: options.width.size,
                             fontSize: options.fontSize.size + "px",
                             fontFamily: options.font,
                             lineHeight: options.lineSpacing,
                             color: options.color.textColor
                         }
                     }>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eius ut perspiciatis corrupti ratione, illo adipisci eligendi commodi atque quisquam aspernatur exercitationem dolorem distinctio tenetur eaque aut voluptates amet! Repudiandae assumenda, necessitatibus sapiente consequatur maiores architecto ratione similique tempore perferendis, in nesciunt cupiditate harum dolorum totam reprehenderit quia magnam molestias. Consectetur repellendus excepturi totam quo culpa rem laudantium corporis aut accusamus praesentium. Quae non magni harum, repudiandae aspernatur eveniet. Nobis, ipsa iste aut voluptatem quidem aliquid, provident modi animi mollitia exercitationem molestias. Impedit sit, ipsum cupiditate magnam alias provident maiores sequi deleniti quod molestias! Neque minima molestias quos dolorem? A, placeat rerum minus praesentium deleniti nostrum. Nam illum cupiditate reiciendis voluptatum ipsam consequatur iure quibusdam deserunt et aspernatur nemo culpa voluptatibus itaque facere in eligendi dolorum ab similique, nostrum amet nulla, explicabo porro commodi repudiandae? Corrupti quis quae incidunt minima rerum corporis, exercitationem modi ad quos distinctio dolorem velit hic in omnis a fugit quasi illo qui explicabo, ducimus commodi quam? Placeat assumenda optio veniam beatae blanditiis eaque deleniti, repudiandae voluptatum libero. Tempore perferendis possimus, est praesentium dolor tenetur quis reprehenderit nemo accusamus distinctio expedita dolore commodi minus soluta quam consequuntur non, similique rerum animi repudiandae ea fugiat consectetur obcaecati.
-                    </p>
+
+                    {
+                        bookChapter?.content.split('.').map((content, index) => (
+                            <p key={index}>{content}</p>
+                        ))
+                    }
                 </div>
             </div>
-            <div className="dropdown sticky top-20 h-full">
+            <div className="dropdown sticky top-20 h-full hidden md:flex">
                 <div tabIndex={0} role="button" className="btn btn-circle btn-outline"
                     style={
                         {
@@ -318,7 +369,6 @@ const NovelChapterPage = () => {
                             </div>
                         </div>
 
-
                         <div>
                             <span>Cỡ chữ</span>
                             <div className="flex justify-between w-full gap-4 items-center">
@@ -331,6 +381,27 @@ const NovelChapterPage = () => {
                                 </button>
                             </div>
                         </div>
+                        <label className="form-control w-full max-w-xs">
+                            <div className="label">
+                                <span className="label-text"
+                                    style={{
+                                        color: options.color.textColor
+                                    }}
+                                >Chọn kiểu chữ</span>
+                            </div>
+                            <select className="select select-bordered" onChange={(e) => changeFont(e.target.value)}
+                                style={{
+                                    background: options.color.primaryColor,
+                                }}
+                            >
+                                {
+                                    fontFamilies.map((font, index) => (
+                                        <option key={index} value={font}>{font}</option>
+                                    ))
+                                }
+                            </select>
+
+                        </label>
                     </div>
                 </div>
             </div>
