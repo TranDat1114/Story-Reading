@@ -15,18 +15,14 @@ const NotFound404Page = lazy(() => import('@components/pages/not-found-404'));
 const NovelChapterPage = lazy(() => import('@components/pages/novel-chapter'));
 const ProfilePage = lazy(() => import('@components/pages/profile'));
 
-
 function App() {
   return (
     <div className='App'>
       <Router>
         <Layout>
-          <Suspense fallback={
-            <LoadingPage />
-          }>
+          <Suspense fallback={<LoadingPage />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/home" element={<HomePage />} />
               <Route path="/novels" element={<NovelsPage />} />
               <Route path="/novels/:bookName" element={<NovelsPage />} />
               <Route path="/novels/:novelName/:chapterNumber" element={<NovelChapterPage />} />
