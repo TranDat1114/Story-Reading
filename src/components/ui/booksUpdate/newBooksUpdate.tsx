@@ -8,8 +8,8 @@ const NewBooksUpdate = () => {
     const databooks: Book[] = BookData.books as Book[];
 
     return (
-        <>
-            <div className="w-full space-y-4">
+
+            <div className="w-full space-y-4 rounded-lg outline outline-1 outline-base-300 p-4">
                 {databooks.map((book, index) => (
                     <div key={index}>
                         <div className="grid grid-cols-5  items-center gap-4 mx-2" >
@@ -44,7 +44,6 @@ const NewBooksUpdate = () => {
 
                                         ))}
                                     </div>
-
                                 </div>
                             </div>
                             <div className="category space-x-4 hidden md:col-span-2 md:block">
@@ -62,7 +61,7 @@ const NewBooksUpdate = () => {
                     </div>
                 ))}
             </div>
-        </>
+
     );
 }
 

@@ -42,23 +42,21 @@ const HomePage = () => {
             <div className="lg:grid lg:grid-cols-4 lg:gap-6 lg:space-y-0 space-y-6">
                 <div className="md:col-span-3 space-y-4">
                     <h1 className="text-xl md:text-2xl font-bold">Truyện mới cập nhật</h1>
-                    <div className="border border-solid border-[#f1f2f3] rounded-lg p-4">
-                        <NewBooksUpdate />
-                    </div>
+                    <NewBooksUpdate />
                 </div>
                 <div className="space-y-4">
                     <h1 className="text-xl md:text-2xl font-bold">Truyện đã Full</h1>
-                    <div className="border border-solid border-[#f1f2f3] rounded-lg p-4">
-                        <FullBooksUpdate />
-                    </div>
+
+                    <FullBooksUpdate />
+
                 </div>
             </div>
             <div className="divider"></div>
             <Ads />
             <div className="divider"></div>
-<div>
-    
-</div>
+            <div>
+
+            </div>
         </div>
     );
 }
