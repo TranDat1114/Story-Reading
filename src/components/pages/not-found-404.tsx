@@ -1,26 +1,26 @@
-import Lottie from 'react-lottie';
-import animationData from '../ui/lotties/404-animation-2.json';
+// import Lottie from 'react-lottie';
+// import animationData from '@components/ui/lotties/404-animation-2.json';
 
 
 const NotFound404Page = () => {
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice"
-        }
-    };
+    // const defaultOptions = {
+    //     loop: true,
+    //     autoplay: true,
+    //     animationData: animationData,
+    //     rendererSettings: {
+    //         preserveAspectRatio: "xMidYMid slice"
+    //     }
+    // };
     return (
         <div>
             <div className="flex items-center justify-center h-dvh">
                 <div>
                     <div className="flex items-center justify-center flex-col max-w-sm md:max-w-6xl space-y-4 md:hidden">
-                        <Lottie
+                        {/* <Lottie
                             options={defaultOptions}
                             height="auto"
                             width="auto"
-                        />
+                        /> */}
                         <h2 className="text-3xl md:text-4xl text-center font-bold">Trang của bạn tìm kiếm hiện không khả dụng</h2>
                         <ul className="timeline timeline-vertical">
                             <li>
@@ -62,11 +62,11 @@ const NotFound404Page = () => {
                     </div>
                     <div className='hidden md:block'>
                         <div className='flex items-center justify-center gap-12'>
-                            <Lottie
+                            {/* <Lottie
                                 options={defaultOptions}
                                 height="auto"
                                 width="auto"
-                            />
+                            /> */}
                             <div className='flex flex-col space-y-8'>
                                 <h2 className="text-4xl font-bold">Trang của bạn tìm kiếm hiện không khả dụng</h2>
                                 <ul className="timeline flex flex-wrap w-full">
@@ -100,7 +100,7 @@ const NotFound404Page = () => {
                                         </div>
                                         <div className="timeline-end timeline-box">Kêt thúc dự án</div>
                                     </li>
-                                    
+
                                 </ul>
                                 <div className="flex items-center gap-4">
                                     <button className="btn btn-outline btn-success">
