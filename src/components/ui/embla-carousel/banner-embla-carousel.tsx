@@ -22,11 +22,7 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
         const autoplay = emblaApi?.plugins()?.autoplay
         if (!autoplay) return
 
-        // const resetOrStop =
-        //   autoplay.options.stopOnInteraction === false
-        //     ? autoplay.reset
-        //     : autoplay.stop
-        // resetOrStop()
+        
     }, [])
 
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
@@ -72,7 +68,7 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
                                     <img src={book.img} className="absolute w-full h-full object-cover rounded-box" ></img>
                                     <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
                                     <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
-                                        <img src={book.img} className="shadow-2xl w-[265px] rounded-lg bg-transparent object-cover  max-h-96" />
+                                        <img src={book.img} className="shadow-2xl w-[265px] rounded-lg bg-transparent object-cover h-96" />
                                         <div className="lg:w-1/2">
                                             <div className="prose my-8">
                                                 <h1 className="text-primary text-center lg:text-start">Truyện chữ</h1>
