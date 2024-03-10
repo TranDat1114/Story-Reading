@@ -46,9 +46,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
     return (
         <div className="flex items-center flex-col space-y-4 w-full">
-            <div className='flex justify-between items-center w-full'>
+            <div className='flex justify-between items-center w-full mx-2'>
                 <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
+                    <motion.p className="capitalize text-lg md:text-2xl hover:text-orange-500 font-bold cursor-pointer"
                         whileHover={{
                             scale: 1.2,
                             transition: {
@@ -73,8 +73,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                             <div className="embla__slide cursor-pointer" key={index}>
                                 <Link to={`/novels/${book.path}`} className='book-link' >
                                     <img src={book.img} className="embla__slide__number object-cover object-center w-full" loading='lazy' alt={book.name + ' Cover'} />
-                                    <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
-                                    <p className='text-center text-sm truncate font-bold hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.lastChapter}</p>
+                                    <p className='text-center text-xs md:text-sm truncate hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
+                                    <p className='text-center text-xs md:text-sm truncate hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.lastChapter}</p>
                                 </Link>
                             </div>
                         ))}
