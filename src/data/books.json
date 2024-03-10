@@ -148,7 +148,7 @@
             "img": "https://upload.wikimedia.org/wikipedia/en/9/92/5_Centimeters_Per_Second.jpg",
             "name": "5 Centimeters per Second",
             "path": "5-centimeters-per-second",
-            "status": "comming-soon",
+            "status": "completed",
             "rating": "4.95/5",
             "released": "2016-08-26",
             "chapters": [],
@@ -214,7 +214,7 @@
         {
             "img": "https://upload.wikimedia.org/wikipedia/commons/3/30/LuisSuarezMiramontes1960.webp",
             "name": "The History of FC Barcelona",
-            "status": "on-going",
+            "status": "completed",
             "path": "the-history-of-fc-barcelona",
             "views": 529,
             "released": "2016-08-26",

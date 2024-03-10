@@ -116,17 +116,7 @@ const NovelsPage = () => {
                                                 <span className='text-primary cursor-pointer'>{bookDetails.author}</span>
                                             </p>
                                         </div>
-                                        <div className='flex items-center'>
-                                            <p className='font-semibold'>
-                                                <span>Thể loại: </span>
-                                                {bookDetails.categories.map((category, index) => (
-                                                    <React.Fragment key={index}>
-                                                        <span className='badge badge-primary badge-outline cursor-pointer'>{category.name}</span>
-                                                        {index < bookDetails.categories.length - 1 && <span className='text-gray-500 mx-1'>,</span>}
-                                                    </React.Fragment>
-                                                ))}
-                                            </p>
-                                        </div>
+
                                         <div className='flex items-center'>
                                             <p className=' font-semibold'>
                                                 <span >Ngày ra mắt: </span>
@@ -139,6 +129,19 @@ const NovelsPage = () => {
                                                 <span className="text-primary cursor-pointer">{t(bookDetails.status)}</span>
                                             </p>
                                         </div>
+
+                                        <div className='flex items-center'>
+                                            <p className='font-semibold'>
+                                                <span>Thể loại: </span>
+                                                {bookDetails.categories.map((category, index) => (
+                                                    <React.Fragment key={index}>
+                                                        <span className='badge badge-primary badge-outline cursor-pointer'>{category.name}</span>
+                                                        {index < bookDetails.categories.length - 1 && <span className='text-gray-500'>,</span>}
+                                                    </React.Fragment>
+                                                ))}
+                                            </p>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div className='w-full lg:justify-start justify-center flex gap-x-2 text-white'>

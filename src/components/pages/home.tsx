@@ -62,7 +62,7 @@ const HomePage = () => {
             <div className="divider">
                 💖
             </div>
-            <div className="md:grid md:grid-cols-4 gap-6">
+            <div className="lg:grid lg:grid-cols-4 lg:gap-6 lg:space-y-0 space-y-6">
                 <div className="md:col-span-3 space-y-4">
                     <h1 className="text-xl md:text-2xl font-bold">Truyện mới cập nhật</h1>
                     <div className="border border-solid border-[#f1f2f3] rounded-lg p-4">

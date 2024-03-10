@@ -8,11 +8,11 @@ const FullBooksUpdate = () => {
     return (
         <>
             <div className="w-full space-y-4">
-                {databooks.map((book, index) => (
+                {databooks.filter(p=>p.status==="completed").map((book, index) => (
                     <div key={index}>
                         <div className="flex flex-col space-y-4 mx-4" >
                             <Link to={`/novels/${book.path}`} >
-                                <p className="font-semibold text-xl hover:text-orange-500 transition-all duration-300">{book.name}</p>
+                                <p className="font-semibold text:lg md:text-xl hover:text-orange-500 transition-all duration-300">{book.name}</p>
                             </Link>
                             <div className="flex flex-wrap gap-4">
                                 <span key={index} className="badge badge-success">{book.status}</span>
