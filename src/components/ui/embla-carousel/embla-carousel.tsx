@@ -1,11 +1,11 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import {
     PrevButton,
     NextButton,
     usePrevNextButtons
-} from './embla-arrow-button'
-// import Autoplay from 'embla-carousel-autoplay'
+} from '@/components/ui/embla-carousel/embla-arrow-button'
+import Autoplay, { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Book } from '@/types/home'
 import { Link } from 'react-router-dom'
@@ -17,25 +17,23 @@ type PropType = {
     title: string
 }
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
+const EmblaCarousel: React.FC<PropType> = React.memo((props) => {
     const { slides, options, title } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
+
+    const slidesMemoized = useMemo(() => slides, [slides])
+
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
     const onNavButtonClick = useCallback(() => {
-        // const autoplay = emblaApi?.plugins()?.autoplay
-        // if (!autoplay) return
+        const autoplay = emblaApi?.plugins()?.autoplay
+        if (!autoplay) return
 
-        // const resetOrStop =
-        //   autoplay.options.stopOnInteraction === false
-        //     ? autoplay.reset
-        //     : autoplay.stop
-        // resetOrStop()
-    }, [])
-
-    // const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
-    //     emblaApi,
-    //     onNavButtonClick
-    // )
+        const resetOrStop =
+            (autoplay.options as AutoplayOptionsType).stopOnInteraction === false
+                ? (autoplay.reset as () => void)
+                : (autoplay.stop as () => void)
+        resetOrStop()
+    }, [emblaApi])
 
     const {
         prevBtnDisabled,
@@ -69,10 +67,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <section className="embla">
                 <div className="embla__viewport" ref={emblaRef}>
                     <div className="embla__container space-y-4">
-                        {slides.map((book, index) => (
+                        {slidesMemoized.map((book, index) => (
                             <div className="embla__slide cursor-pointer" key={index}>
                                 <Link to={`/novels/${book.path}`} className='book-link' >
-                                    <img src={book.img} className="embla__slide__number object-cover object-center w-full" loading='lazy' alt={book.name + ' Cover'} />
+                                    <img src={book.img} className="embla__slide__number object-cover object-center w-full h-40 md:h-72" loading='lazy' alt={book.name + ' Cover'} />
                                     <p className='text-center text-xs md:text-sm truncate hover:text-orange-500 transtion-300 ease-in-out duration-300'>{book.name}</p>
                                     <p className='text-center text-xs md:text-sm truncate hover:text-orange-500 transtion-300 ease-in-out duration-300'>Chương {book.lastChapter}</p>
                                 </Link>
@@ -82,8 +80,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
             </section>
         </div>
-
     )
-}
+})
 
 export default EmblaCarousel

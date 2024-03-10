@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
-import { routes } from '@components/pages/routes';
+import { routesdata } from '@/components/pages/routes';
 import { Home } from 'lucide-react';
 
 const Breadcrumbs = () => {
@@ -27,7 +27,7 @@ const Breadcrumbs = () => {
                     pathnames.map((name, index) => {
                         const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
                         return (
-                            routes.some(p => p.name === name) && (
+                            routesdata.some(p => p.name === name) && (
                                 <li key={name}>
                                     {
                                         <Link to={routeTo} className='link link-hover'>

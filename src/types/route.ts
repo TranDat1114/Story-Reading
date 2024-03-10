@@ -1,7 +1,7 @@
-interface Route {
+interface RouteType {
     name: string;
     path: string;
-    element?: React.ReactNode;
+    element?: React.LazyExoticComponent<() => JSX.Element>;
     icon?: React.ReactNode;
     isParam?: boolean;
     isDropdown?: boolean;
@@ -13,4 +13,4 @@ interface RouteItem {
     path: string;
 }
 
-export type { Route, RouteItem }
+export type { RouteType, RouteItem }

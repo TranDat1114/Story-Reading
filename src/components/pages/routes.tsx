@@ -1,83 +1,7 @@
-import HomePage from "@/components/pages/home"
-import { Route, RouteItem } from "@/types/route"
-import { Dna, Home, Sparkle } from 'lucide-react'
-import NovelsPage from "@/components/pages/novels"
+import { RouteType, RouteItem } from "@/types/route"
+import { Dna, Home, Sparkle } from "lucide-react"
 import rankingsData from "@/data/rankings.json"
-import GenrePage from "@components/pages/genres"
-import RankingPage from "@components/pages/rankings"
-import DieuKhoanPage from "./dieukhoan"
-import BaoMatPage from "./baomat"
-import FaqsPage from "./faqs"
-import NotFound404Page from "./not-found-404"
-import NovelChapterPage from "./novel-chapter"
-import ProfilePage from "./profile"
-
-
-
-const routes: Route[] = [
-    {
-        path: '/',
-        name: 'home',
-        element: <HomePage />
-    },
-    {
-        path: '/novels',
-        name: 'genres',
-        element: <GenrePage />,
-    },
-    {
-        path: "/novels/?genres=:genreName",
-        name: "genres",
-        element: <GenrePage />
-    },
-    {
-        path: "/novels/:bookName",
-        name: "novels",
-        element: <NovelsPage />,
-    },
-    {
-        path: "/novels/:novelName/:chapterNumber",
-        name: "novels",
-        element: <NovelChapterPage />,
-    },
-    {
-        path: "/rankings/:rankingName",
-        name: "rankings",
-        element: <RankingPage />,
-    },
-    {
-        path: "/terms",
-        name: "terms",
-        element: <DieuKhoanPage />
-    },
-    {
-        path: "/privacy",
-        name: "privacy",
-        element: <BaoMatPage />
-    },
-    {
-        path: "/faqs",
-        name: "faqs",
-        element: <FaqsPage />
-    },
-    {
-        path: "/rankings",
-        name: "rankings",
-        element: <RankingPage />,
-    },
-    {
-        path: "/*",
-        name: "not-found-404",
-        element: <NotFound404Page />
-    },
-    {
-        path: "/profile",
-        name: "profile",
-        element: <ProfilePage />
-    }
-]
-
-const routesNavLink: Route[] = [
+const routesNavLink: RouteType[] = [
     {
         path: '/',
         name: 'home',
@@ -97,4 +21,57 @@ const routesNavLink: Route[] = [
     }
 ]
 
-export { routes, routesNavLink }
+
+
+const routesdata: RouteType[] = [
+    {
+        path: '/',
+        name: 'home',
+    },
+    {
+        path: '/novels',
+        name: 'genres',
+    },
+    {
+        path: "/novels/?genres=:genreName",
+        name: "genres",
+    },
+    {
+        path: "/novels/:bookName",
+        name: "novels",
+    },
+    {
+        path: "/novels/:novelName/:chapterNumber",
+        name: "novels",
+    },
+    {
+        path: "/rankings/:rankingName",
+        name: "rankings",
+    },
+    {
+        path: "/terms",
+        name: "terms",
+    },
+    {
+        path: "/privacy",
+        name: "privacy",
+    },
+    {
+        path: "/faqs",
+        name: "faqs",
+    },
+    {
+        path: "/rankings",
+        name: "rankings",
+    },
+    {
+        path: "/*",
+        name: "not-found-404",
+    },
+    {
+        path: "/profile",
+        name: "profile",
+    }
+]
+
+export { routesNavLink, routesdata }

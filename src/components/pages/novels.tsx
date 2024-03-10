@@ -135,7 +135,7 @@ const NovelsPage = () => {
                                                 <span>Thể loại: </span>
                                                 {bookDetails.categories.map((category, index) => (
                                                     <React.Fragment key={index}>
-                                                        <span className='badge badge-primary badge-outline cursor-pointer'>{category.name}</span>
+                                                        <Link to={`/novels/?genres=${category.name}`} key={index} className="badge badge-warning badge-outline">{category.name}</Link>
                                                         {index < bookDetails.categories.length - 1 && <span className='text-gray-500'>,</span>}
                                                     </React.Fragment>
                                                 ))}
