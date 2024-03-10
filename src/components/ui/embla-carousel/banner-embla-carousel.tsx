@@ -22,7 +22,7 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
         const autoplay = emblaApi?.plugins()?.autoplay
         if (!autoplay) return
 
-        
+
     }, [])
 
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
@@ -65,7 +65,7 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
                         {slides.map((book, index) => (
                             <Link to={`/novels/${book.path}`} className="embla__slide cursor-pointer" key={index}>
                                 <div className="hero rounded-box relative w-full">
-                                    <img src={book.img} className="absolute w-full h-full object-cover rounded-box" ></img>
+                                    <img src={book.img} className="absolute w-full h-full object-cover rounded-box" alt={book.name}></img>
                                     <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
                                     <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
                                         <img src={book.img} className="shadow-2xl w-[265px] rounded-lg bg-transparent object-cover h-96" />
