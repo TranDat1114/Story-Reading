@@ -18,9 +18,6 @@ const Footer = () => {
                     <a className="link link-hover" href="/privacy" target="_blank">{t("privacy")}</a>
                     <a className="link link-hover" href="/terms" target="_blank">{t("terms")}</a>
                 </nav>
-
-
-
                 <aside>
                     <p>{t("copyright")}</p>
                 </aside>

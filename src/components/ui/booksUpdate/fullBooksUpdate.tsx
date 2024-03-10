@@ -8,7 +8,7 @@ const FullBooksUpdate = () => {
     return (
         <>
             <div className="w-full space-y-4">
-                {databooks.filter(p=>p.status==="completed").map((book, index) => (
+                {databooks.filter(p => p.status === "completed").map((book, index) => (
                     <div key={index}>
                         <div className="flex flex-col space-y-4 mx-4" >
                             <Link to={`/novels/${book.path}`} >
@@ -18,7 +18,8 @@ const FullBooksUpdate = () => {
                                 <span key={index} className="badge badge-success">{book.status}</span>
 
                                 {book.categories.map((category, index) => (
-                                    <span key={index} className="badge badge-warning">{category.name}</span>
+                                    <Link to={`/novels/?genres=${category.path}`} key={index} className="badge badge-warning">{category.name}</Link>
+
                                 ))}
 
                             </div>

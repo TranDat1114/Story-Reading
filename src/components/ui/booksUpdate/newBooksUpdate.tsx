@@ -1,6 +1,6 @@
 import BookData from "@/data/books.json";
 import { Book } from "@/types/home";
-import {  NotebookText, User } from "lucide-react";
+import { NotebookText, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NewBooksUpdate = () => {
@@ -39,8 +39,9 @@ const NewBooksUpdate = () => {
                                         <p className="text-sm">{book.timeReleased} phút trước</p>
                                     </div>
                                     <div className="flex flex-wrap gap-1 md:hidden">
-                                        {book.categories.slice(0,2).map((category, index) => (
-                                            <span key={index} className="badge badge-warning">{category.name}</span>
+                                        {book.categories.slice(0, 2).map((category, index) => (
+                                            <Link to={`/novels/?genres=${category.path}`} key={index} className="badge badge-warning">{category.name}</Link>
+
                                         ))}
                                     </div>
 
@@ -48,8 +49,9 @@ const NewBooksUpdate = () => {
                             </div>
                             <div className="category space-x-4 hidden md:col-span-2 md:block">
                                 <div className="flex flex-wrap gap-4">
-                                    {book.categories.slice(0,6).map((category, index) => (
-                                        <span key={index} className="badge badge-warning">{category.name}</span>
+                                    {book.categories.slice(0, 6).map((category, index) => (
+                                        <Link to={`/novels/?genres=${category.path}`} key={index} className="badge badge-warning">{category.name}</Link>
+
                                     ))}
                                 </div>
                             </div>
