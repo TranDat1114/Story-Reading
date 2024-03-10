@@ -1,91 +1,64 @@
-import React, { useCallback } from 'react'
-import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
-
-import Autoplay, { AutoplayOptionsType } from 'embla-carousel-autoplay'
-import useEmblaCarousel from 'embla-carousel-react'
-import { Book } from '@/types/home'
-import { Link } from 'react-router-dom'
-import { Heart } from 'lucide-react'
-import { DotButton, useDotButton } from './embla-dot-button'
+import React, { useCallback } from 'react';
+import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel';
+import Autoplay, { AutoplayOptionsType } from 'embla-carousel-autoplay';
+import useEmblaCarousel from 'embla-carousel-react';
+import { Book } from '@/types/home';
+import { Link } from 'react-router-dom';
+import { Heart } from 'lucide-react';
+import { DotButton, useDotButton } from './embla-dot-button';
 
 type PropType = {
-    slides: Book[]
-    options?: EmblaOptionsType,
-    title: string
-}
+    slides: Book[];
+    options?: EmblaOptionsType;
+    title: string;
+};
 
-const BannerEmblaCarousel: React.FC<PropType> = (props) => {
-    const { slides, options } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+const BannerEmblaCarousel: React.FC<PropType> = React.memo((props) => {
+    const { slides, options } = props;
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
 
     const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
-        const autoplay = emblaApi?.plugins()?.autoplay
-        if (!autoplay) return
+        const autoplay = emblaApi?.plugins()?.autoplay;
+        if (!autoplay) return;
         const resetOrStop =
             (autoplay.options as AutoplayOptionsType).stopOnInteraction === false
                 ? (autoplay.reset as () => void)
-                : (autoplay.stop as () => void)
-        resetOrStop()
-
-    }, [])
+                : (autoplay.stop as () => void);
+        resetOrStop();
+    }, []);
 
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
         emblaApi,
         onNavButtonClick
-    )
-
-    // const {
-    //     prevBtnDisabled,
-    //     nextBtnDisabled,
-    //     onPrevButtonClick,
-    //     onNextButtonClick
-    // } = usePrevNextButtons(emblaApi, onNavButtonClick)
+    );
 
     return (
         <div className="flex items-center flex-col space-y-4 w-full">
-            {/* <div className='flex justify-between items-center w-full'>
-                <div className="flex items-center gap-x-2 hover:text-orange-500 transition-all duration-300 ease-in-out">
-                    <motion.p className="capitalize text-2xl hover:text-orange-500 font-bold cursor-pointer"
-                        whileHover={{
-                            scale: 1.2,
-                            transition: {
-                                duration: 1,
-                                ease: "easeInOut"
-                            },
-                        }}
-                        onHoverStart={() => { }}
-                        onHoverEnd={() => { }}
-                    >{title}</motion.p>
-                </div>
-                <div className="embla__buttons justify-items-center gap-x-2 md:gap-x-8 lg:justify-center">
-                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-                </div>
-            </div> */}
-
             <section className="banner-embla">
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex banner-embla-container w-screen">
                         {slides.map((book, index) => (
-                            <Link to={`/novels/${book.path}`} className="embla__slide cursor-pointer" key={index}>
-                                <div className="hero rounded-box relative w-full">
-                                    <img src={book.img} className="absolute w-full h-full object-cover rounded-box" alt={book.name}></img>
-                                    <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
-                                    <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
-                                        <img src={book.img} className="shadow-2xl w-[265px] rounded-lg bg-transparent object-cover h-96" />
-                                        <div className="lg:w-1/2">
-                                            <div className="prose my-8">
-                                                <h1 className="text-primary text-center lg:text-start">Truyện chữ</h1>
-                                                <h4 className="text-white line-clamp-4">Trang web đọc truyện này cung cấp một trải nghiệm độc đáo và thú vị cho độc giả, với bộ sưu tập đa dạng của các thể loại truyện, từ hài hước đến kinh điển.</h4>
-                                            </div>
-                                            <div className="flex gap-x-4 justify-center lg:justify-start">
-                                                <button className="btn btn-primary btn-md" >Đọc ngay</button>
-                                                <button className="btn btn-primary btn-md"><Heart /> Yêu thích</button>
+                            <React.Fragment key={index}>
+                                <Link to={`/novels/${book.path}`} className="embla__slide cursor-pointer">
+                                    <div className="hero rounded-box relative w-full">
+                                        <img src={book.img} className="absolute w-full h-full object-cover rounded-box" alt={book.name} />
+                                        <div className="hero-overlay bg-opacity-80 backdrop-blur-sm rounded-box"></div>
+                                        <div className="hero-content flex-col lg:flex-row lg:gap-x-8 w-full justify-evenly">
+                                            <img src={book.img} className="shadow-2xl w-[265px] rounded-lg bg-transparent object-cover h-96" alt={book.name} />
+                                            <div className="lg:w-1/2">
+                                                <div className="prose my-8">
+                                                    <h1 className="text-primary text-center lg:text-start">Truyện chữ</h1>
+                                                    <h4 className="text-white line-clamp-4">Trang web đọc truyện này cung cấp một trải nghiệm độc đáo và thú vị cho độc giả, với bộ sưu tập đa dạng của các thể loại truyện, từ hài hước đến kinh điển.</h4>
+                                                </div>
+                                                <div className="flex gap-x-4 justify-center lg:justify-start">
+                                                    <button className="btn btn-primary btn-md">Đọc ngay</button>
+                                                    <button className="btn btn-primary btn-md"><Heart /> Yêu thích</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
+                                </Link>
+                            </React.Fragment>
                         ))}
                     </div>
                 </div>
@@ -104,8 +77,7 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
             </section>
         </div>
+    );
+});
 
-    )
-}
-
-export default BannerEmblaCarousel
+export default BannerEmblaCarousel;

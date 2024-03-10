@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import {
     PrevButton,
@@ -17,8 +17,11 @@ type PropType = {
     title: string
 }
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
+const EmblaCarousel: React.FC<PropType> = React.memo((props) => {
     const { slides, options, title } = props
+
+    const slidesMemoized = useMemo(() => slides, [slides])
+
     const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
     const onNavButtonClick = useCallback(() => {
@@ -31,11 +34,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 : (autoplay.stop as () => void)
         resetOrStop()
     }, [emblaApi])
-
-    // const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
-    //     emblaApi,
-    //     onNavButtonClick
-    // )
 
     const {
         prevBtnDisabled,
@@ -69,7 +67,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             <section className="embla">
                 <div className="embla__viewport" ref={emblaRef}>
                     <div className="embla__container space-y-4">
-                        {slides.map((book, index) => (
+                        {slidesMemoized.map((book, index) => (
                             <div className="embla__slide cursor-pointer" key={index}>
                                 <Link to={`/novels/${book.path}`} className='book-link' >
                                     <img src={book.img} className="embla__slide__number object-cover object-center w-full h-40 md:h-72" loading='lazy' alt={book.name + ' Cover'} />
@@ -82,8 +80,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 </div>
             </section>
         </div>
-
     )
-}
+})
 
 export default EmblaCarousel
