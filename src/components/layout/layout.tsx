@@ -15,10 +15,10 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="w-full relative space-y-2">
             <Header />
             <main className=" min-h-svh space-y-2">
-                <div className="container mt-20 w-full mx-auto ">
+                <div className="mt-20 w-full mx-auto ">
                     <Breadcrumbs />
                 </div>
-                <div className="container mx-auto">
+                <div className=" mx-auto">
                     {children}
                 </div>
             </main>

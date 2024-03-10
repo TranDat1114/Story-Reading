@@ -46,7 +46,6 @@ const HomePage = () => {
                         <FullBooksUpdate />
                     </div>
                 </div>
-                <div className="divider"></div>
             </Suspense>
         </div>
     );
