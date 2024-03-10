@@ -1,11 +1,11 @@
 import React, { useCallback } from 'react'
-import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
+import { EmblaOptionsType } from 'embla-carousel'
 import {
     PrevButton,
     NextButton,
     usePrevNextButtons
 } from './embla-arrow-button'
-import Autoplay from 'embla-carousel-autoplay'
+// import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Book } from '@/types/home'
 import { Link } from 'react-router-dom'
@@ -19,11 +19,11 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
     const { slides, options, title } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
+    const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
-    const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
-        const autoplay = emblaApi?.plugins()?.autoplay
-        if (!autoplay) return
+    const onNavButtonClick = useCallback(() => {
+        // const autoplay = emblaApi?.plugins()?.autoplay
+        // if (!autoplay) return
 
         // const resetOrStop =
         //   autoplay.options.stopOnInteraction === false

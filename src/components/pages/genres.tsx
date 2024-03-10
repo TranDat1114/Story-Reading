@@ -5,13 +5,13 @@ import { EmblaOptionsType } from "embla-carousel";
 
 import "@components/ui/embla-carousel/embla.css"
 import EmblaCarousel from "@components/ui/embla-carousel/embla-carousel";
-import EmblaCarouselGenere from "../ui/embla-carousel-genre/embla-caoursel-genre";
+import EmblaCarouselGenere from "@components/ui/embla-carousel/embla-caoursel-genre";
 
 // import { ArrowRight } from "lucide-react";
 // import { useRef } from "react";
 // import BannerEmblaCarousel from "../ui/embla-carousel/banner-embla-carousel";
 const OPTIONS: EmblaOptionsType = { loop: true }
-const optionsGenere: EmblaOptionsType = {loop: true, align: 'start', dragFree: true }
+const optionsGenere: EmblaOptionsType = { loop: true, align: 'start', dragFree: true }
 
 const GenrePage = () => {
 

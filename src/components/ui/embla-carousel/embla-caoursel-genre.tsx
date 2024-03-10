@@ -4,7 +4,7 @@ import {
     PrevButton,
     NextButton,
     usePrevNextButtons
-} from './embla-caoursel-button'
+} from '@/components/ui/embla-carousel/embla-arrow-button'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Book } from '@/types/home'
 import { Link } from 'react-router-dom'
