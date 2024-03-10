@@ -35,7 +35,6 @@ const HomePage = () => {
                 {/* <EmblaCarousel slides={databooks} options={OPTIONS} title={"Truyện yêu thích mỗi tuần"} /> */}
                 {/* <div className="divider"></div> */}
                 {/* <Ads /> */}
-                <div className="divider">💖</div>
 
                 <div className="lg:grid lg:grid-cols-4 lg:gap-6 lg:space-y-0 space-y-6">
                     <div className="md:col-span-3 space-y-4">
