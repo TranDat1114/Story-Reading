@@ -2,8 +2,8 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Layout from '@components/layout/layout';
-import LoadingPage from './components/pages/loading';
 
+const LoadingPage = lazy(() => import('@components/pages/loading'));
 const HomePage = lazy(() => import('@/components/pages/home'));
 const NovelsPage = lazy(() => import('@/components/pages/novels'));
 const GenrePage = lazy(() => import('@components/pages/genres'));
