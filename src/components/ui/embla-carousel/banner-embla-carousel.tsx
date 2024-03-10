@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import { EmblaOptionsType, EmblaCarouselType } from 'embla-carousel'
 
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay, { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Book } from '@/types/home'
 import { Link } from 'react-router-dom'
@@ -21,7 +21,11 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
     const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
         const autoplay = emblaApi?.plugins()?.autoplay
         if (!autoplay) return
-
+        const resetOrStop =
+            (autoplay.options as AutoplayOptionsType).stopOnInteraction === false
+                ? (autoplay.reset as () => void)
+                : (autoplay.stop as () => void)
+        resetOrStop()
 
     }, [])
 
@@ -61,7 +65,7 @@ const BannerEmblaCarousel: React.FC<PropType> = (props) => {
 
             <section className="banner-embla">
                 <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex banner-embla-container max-w-xs md:container">
+                    <div className="flex banner-embla-container w-screen">
                         {slides.map((book, index) => (
                             <Link to={`/novels/${book.path}`} className="embla__slide cursor-pointer" key={index}>
                                 <div className="hero rounded-box relative w-full">

@@ -4,8 +4,8 @@ import {
     PrevButton,
     NextButton,
     usePrevNextButtons
-} from './embla-arrow-button'
-// import Autoplay from 'embla-carousel-autoplay'
+} from '@/components/ui/embla-carousel/embla-arrow-button'
+import Autoplay, { AutoplayOptionsType } from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import { Book } from '@/types/home'
 import { Link } from 'react-router-dom'
@@ -19,18 +19,18 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
     const { slides, options, title } = props
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
+    const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
     const onNavButtonClick = useCallback(() => {
-        // const autoplay = emblaApi?.plugins()?.autoplay
-        // if (!autoplay) return
+        const autoplay = emblaApi?.plugins()?.autoplay
+        if (!autoplay) return
 
-        // const resetOrStop =
-        //   autoplay.options.stopOnInteraction === false
-        //     ? autoplay.reset
-        //     : autoplay.stop
-        // resetOrStop()
-    }, [])
+        const resetOrStop =
+            (autoplay.options as AutoplayOptionsType).stopOnInteraction === false
+                ? (autoplay.reset as () => void)
+                : (autoplay.stop as () => void)
+        resetOrStop()
+    }, [emblaApi])
 
     // const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
     //     emblaApi,
