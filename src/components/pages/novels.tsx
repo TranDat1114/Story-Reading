@@ -6,6 +6,7 @@ import { Flag, Glasses, MoreHorizontal, NotebookText, SendHorizonal, ThumbsUp } 
 // import userData from '@/data/user.json';
 import Ads from "@components/ui/banner/ads";
 import { useTranslation } from "react-i18next";
+import LoadingSpinner from '@components/pages/loading'
 import { Users } from '@/types/users';
 import User from '@/data/user.json';
 
@@ -34,26 +35,35 @@ const NovelsPage = () => {
 
     const [bookDetails, setBookDetails] = useState<Book | undefined>(undefined);
 
-
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         setBookDetails(booksData.books.find((book) => book.path === bookName));
     }, [bookDetails, bookName])
 
+    useEffect(() => {
+        const fetchData = async () => {
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            setLoading(false);
+        };
+
+        fetchData();
+    }, []);
 
     const [isHideDetails, setIsHideDetails] = useState(true);
 
     if (!bookDetails) {
-        return (
-            <div>
-                <h1>Không tìm thấy trang</h1>
-            </div>
-        );
-    } else {
+        return <div><LoadingSpinner /></div>;
+        // code Thêm trang loading ở đây
+    }
 
-        return (
-            <div className='space-y-4 w-full'>
 
+
+    return (
+        <div className='space-y-4 w-full'>
+            {loading ? (
+                <LoadingSpinner />
+            ) : (
                 <div>
                     <div className={`hero rounded-box relative w-full my-4`}>
                         <img src={`${bookDetails.img}`} className="absolute w-full h-full object-cover rounded-box" alt={bookDetails.name + 'Cover'} />
@@ -287,11 +297,9 @@ const NovelsPage = () => {
                         </div>
                     </div>
                 </div>
-
-            </div>
-        );
-    }
-
+            )}
+        </div>
+    );
 };
 
 export default NovelsPage;
